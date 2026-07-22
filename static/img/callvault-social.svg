@@ -1,0 +1,29 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CallVault documentation">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B4F54"/>
+      <stop offset="1" stop-color="#0F6E74"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="120" y1="210" x2="300" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EAF6F7"/>
+      <stop offset="1" stop-color="#8FD7DB"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.14" stroke="#EAF6F7" stroke-width="6" stroke-linecap="round">
+    <line x1="820" y1="315" x2="820" y2="315"/>
+    <line x1="860" y1="250" x2="860" y2="380"/>
+    <line x1="900" y1="200" x2="900" y2="430"/>
+    <line x1="940" y1="270" x2="940" y2="360"/>
+    <line x1="980" y1="160" x2="980" y2="470"/>
+    <line x1="1020" y1="240" x2="1020" y2="390"/>
+    <line x1="1060" y1="290" x2="1060" y2="340"/>
+    <line x1="1100" y1="210" x2="1100" y2="420"/>
+  </g>
+  <rect x="110" y="200" width="230" height="230" rx="46" fill="#0A4145"/>
+  <circle cx="225" cy="315" r="66" fill="none" stroke="url(#mark)" stroke-width="14"/>
+  <circle cx="225" cy="315" r="17" fill="#EAF6F7"/>
+  <text x="400" y="300" font-family="Inter, sans-serif" font-size="84" font-weight="700" fill="#FFFFFF">CallVault</text>
+  <text x="402" y="372" font-family="Inter, sans-serif" font-size="38" font-weight="500" fill="#BFE6E8">Documentation</text>
+  <text x="402" y="440" font-family="Inter, sans-serif" font-size="30" font-weight="400" fill="#9FD4D8">Personal Android call recorder — offline-first, your-server-only.</text>
+</svg>

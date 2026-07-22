@@ -1,0 +1,9 @@
+release:
+  label: Release
+  permalink: /release
+  description: CallVault release announcements.
+
+android:
+  label: Android
+  permalink: /android
+  description: Posts about the Android app.

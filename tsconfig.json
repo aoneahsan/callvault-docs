@@ -1,0 +1,9 @@
+{
+  "extends": "@docusaurus/tsconfig",
+  "compilerOptions": {
+    // The Docusaurus base tsconfig still sets `baseUrl`, which TS 6 flags as
+    // deprecated (removed in TS 7). Silence it until Docusaurus drops baseUrl upstream.
+    "ignoreDeprecations": "6.0"
+  },
+  "exclude": [".docusaurus", "build"]
+}

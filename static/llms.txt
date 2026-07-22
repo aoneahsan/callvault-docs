@@ -1,0 +1,37 @@
+# CallVault
+
+> CallVault is a personal Android call-recording app. It records the owner's own
+> phone calls, keeps them offline-first on the device (Drift/SQLite is the source of
+> truth), and optionally backs the audio up to storage the owner controls. It is not
+> on Google Play (Play bans silent call recorders) — it is a signed APK you sideload.
+> A web dashboard built from the same codebase lets you browse backed-up recordings.
+> No third-party analytics or telemetry: your-server-only.
+
+Note: Google's docs state it ignores llms.txt. This file is here for other AI
+engines and agents (ChatGPT, Perplexity, Claude) that do read it.
+
+## Getting started
+- Introduction: https://callvault-docs.aoneahsan.com/
+- Install the APK (sideload): https://callvault-docs.aoneahsan.com/getting-started/install
+- Permissions & onboarding: https://callvault-docs.aoneahsan.com/getting-started/permissions
+- Call-recording-law disclaimer (not legal advice): https://callvault-docs.aoneahsan.com/getting-started/legal-disclaimer
+
+## User guide
+- Recording (capture tracks): https://callvault-docs.aoneahsan.com/user-guide/recording
+- Playback & speed controls: https://callvault-docs.aoneahsan.com/user-guide/playback
+- Search & favorites: https://callvault-docs.aoneahsan.com/user-guide/search-favorites
+- Sync & backup: https://callvault-docs.aoneahsan.com/user-guide/sync-backup
+- The web app: https://callvault-docs.aoneahsan.com/user-guide/web-app
+- Profile & preferences: https://callvault-docs.aoneahsan.com/user-guide/profile
+- Account deletion: https://callvault-docs.aoneahsan.com/user-guide/account-deletion
+
+## Architecture
+- Sync pipeline (state machine): https://callvault-docs.aoneahsan.com/architecture/pipeline
+- Data layer: https://callvault-docs.aoneahsan.com/architecture/data-layer
+- Security & privacy: https://callvault-docs.aoneahsan.com/architecture/security-privacy
+- Web/native split: https://callvault-docs.aoneahsan.com/architecture/web-native-split
+
+## Reference
+- Troubleshooting: https://callvault-docs.aoneahsan.com/reference/troubleshooting
+- FAQ: https://callvault-docs.aoneahsan.com/reference/faq
+- Changelog: https://callvault-docs.aoneahsan.com/changelog
