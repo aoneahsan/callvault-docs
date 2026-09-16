@@ -1,11 +1,9 @@
-<svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CallVault">
-  <defs>
-    <linearGradient id="fav-g" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0F6E74"/>
-      <stop offset="1" stop-color="#0B4F54"/>
-    </linearGradient>
-  </defs>
-  <rect width="40" height="40" rx="10" fill="url(#fav-g)"/>
-  <circle cx="20" cy="20" r="10" fill="none" stroke="#EAF6F7" stroke-width="2.6"/>
-  <circle cx="20" cy="20" r="2.8" fill="#EAF6F7"/>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CallVault compact mark">
+  <!-- Small-format derivative of callvault-brand-master.svg: three waveform bars remain distinct at 16px. -->
+  <defs><linearGradient id="tile" x1="128" y1="64" x2="896" y2="960" gradientUnits="userSpaceOnUse"><stop stop-color="#178B91"/><stop offset="0.52" stop-color="#0F6E74"/><stop offset="1" stop-color="#083F45"/></linearGradient></defs>
+  <rect width="1024" height="1024" fill="url(#tile)"/>
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="260" y="244" width="504" height="536" rx="108" stroke-width="64"/>
+    <path d="M396 448V576 M512 350V674 M628 448V576" stroke-width="70"/>
+  </g>
 </svg>
