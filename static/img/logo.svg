@@ -1,10 +1,10 @@
 <svg width="480" height="120" viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CallVault">
   <!-- Generated lockup; mark geometry comes from assets/brand/callvault-brand-master.svg. -->
-  <defs><linearGradient id="tile" x1="8" y1="8" x2="112" y2="112"><stop stop-color="#178B91"/><stop offset="1" stop-color="#083F45"/></linearGradient></defs>
+  <defs><linearGradient id="tile" x1="8" y1="8" x2="112" y2="112"><stop stop-color="#1F899C"/><stop offset="1" stop-color="#0D3E4A"/></linearGradient></defs>
   <rect x="8" y="8" width="104" height="104" rx="24" fill="url(#tile)"/>
   <g transform="translate(8 8) scale(.1015625)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
     <rect x="278" y="250" width="468" height="524" rx="100" stroke-width="52"/>
     <path d="M360 477V547 M436 404V620 M512 352V672 M588 404V620 M664 477V547" stroke-width="50"/>
   </g>
-  <text x="136" y="76" fill="#0A555B" font-family="Manrope, Avenir Next, Segoe UI, sans-serif" font-size="52" font-weight="750" letter-spacing="-1.5">CallVault</text>
+  <text x="136" y="76" fill="#115362" font-family="Manrope, Avenir Next, Segoe UI, sans-serif" font-size="52" font-weight="750" letter-spacing="-1.5">CallVault</text>
 </svg>

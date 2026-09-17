@@ -1,30 +1,30 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CallVault — a private record of your own calls">
   <defs>
     <linearGradient id="bg" x1="72" y1="18" x2="1136" y2="630" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#178B91"/>
-      <stop offset="0.54" stop-color="#0F6E74"/>
-      <stop offset="1" stop-color="#083F45"/>
+      <stop stop-color="#1F899C"/>
+      <stop offset="0.54" stop-color="#166C7D"/>
+      <stop offset="1" stop-color="#0D3E4A"/>
     </linearGradient>
     <radialGradient id="light" cx="0" cy="0" r="1" gradientTransform="translate(906 108) rotate(111) scale(506 642)" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#6FE1D9" stop-opacity="0.18"/>
-      <stop offset="1" stop-color="#6FE1D9" stop-opacity="0"/>
+      <stop stop-color="#6CDFE8" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#6CDFE8" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect width="1200" height="630" fill="url(#light)"/>
-  <path d="M0 540C220 469 366 603 586 532C806 461 953 574 1200 506V630H0Z" fill="#052F34" fill-opacity="0.34"/>
-  <g opacity="0.12" stroke="#E7FFFC" stroke-width="10" stroke-linecap="round">
+  <path d="M0 540C220 469 366 603 586 532C806 461 953 574 1200 506V630H0Z" fill="#082E38" fill-opacity="0.34"/>
+  <g opacity="0.12" stroke="#E9FEFF" stroke-width="10" stroke-linecap="round">
     <path d="M738 483V561 M786 451V593 M834 500V544 M882 420V624 M930 470V574 M978 440V604 M1026 486V558 M1074 459V585"/>
   </g>
-  <rect x="84" y="92" width="256" height="256" rx="60" fill="#FFFFFF" fill-opacity="0.08" stroke="#D9FFFB" stroke-opacity="0.2"/>
+  <rect x="84" y="92" width="256" height="256" rx="60" fill="#FFFFFF" fill-opacity="0.08" stroke="#DDFDFF" stroke-opacity="0.2"/>
   <g transform="translate(84 92) scale(.25)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
     <rect x="278" y="250" width="468" height="524" rx="100" stroke-width="52"/>
     <path d="M360 477V547 M436 404V620 M512 352V672 M588 404V620 M664 477V547" stroke-width="50"/>
   </g>
   <g font-family="Manrope, Avenir Next, Segoe UI, sans-serif">
     <text x="390" y="207" fill="#FFFFFF" font-size="90" font-weight="760" letter-spacing="-3">CallVault</text>
-    <text x="394" y="277" fill="#D9FFFB" font-size="30" font-weight="580">A private record of your own calls</text>
+    <text x="394" y="277" fill="#DDFDFF" font-size="30" font-weight="580">A private record of your own calls</text>
     <text x="88" y="442" fill="#FFFFFF" font-size="34" font-weight="650">Android recording · searchable history · optional backup</text>
-    <text x="88" y="497" fill="#C0EBE8" font-size="24" font-weight="520">callvault.aoneahsan.com</text>
+    <text x="88" y="497" fill="#BFEAEE" font-size="24" font-weight="520">callvault.aoneahsan.com</text>
   </g>
 </svg>
