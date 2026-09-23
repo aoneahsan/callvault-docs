@@ -1,6 +1,6 @@
 ---
-title: Security & privacy
-description: CallVault's posture — your-server-only with no third-party trackers, HTTPS everywhere, an optional app lock, sensitive files in private storage, and strict database rules.
+title: "Security & privacy"
+description: "Recordings sit in app-private storage no other app can read, uploads go over HTTPS only, and there is no end-to-end encryption. The limits are here beside the promises."
 sidebar_position: 3
 tags: [security, privacy, encryption, app-lock]
 keywords: [callvault security, privacy, app lock, https only, no telemetry]
@@ -8,45 +8,35 @@ keywords: [callvault security, privacy, app lock, https only, no telemetry]
 
 # Security & privacy
 
-Call recordings are among the most sensitive data a phone holds, and CallVault is built
-around that.
+Call recordings are among the most sensitive things a phone holds. CallVault is built around that, and the limits are on this page beside the promises.
 
-## Your-server-only
+## What CallVault doesn't collect
 
-There is **no third-party analytics, no ad SDK, and no telemetry**. The only network
-destinations are the developer's own Supabase (metadata) and FilesHub (audio). If you stay
-signed out, nothing leaves the device at all.
+There is no third-party analytics and no advertising SDK in the app; while private cloud backup is off, which is its state until you turn it on, nothing about a call leaves the phone at all. Stay signed out and the phone keeps working exactly the same.
 
-## On the device
+## On the phone
 
-- Audio files live in **app-private storage**, not a public folder any app can read.
-- An optional **app lock** (biometric or PIN) can gate the app before it opens —
-  recommended given the content.
-- Sensitive tokens are held in the platform's secure, hardware-backed storage — never in
-  the plain database or logs.
+Recordings are written to app-private internal storage. No other app on the phone can read them, and nothing puts them in the shared media folders where a gallery or a file manager would find them. What you export to Downloads yourself is a copy you have chosen to move out.
+
+An optional **app lock** puts your fingerprint, your face or the device PIN in front of the app. The biometric data never leaves the phone; Android holds it and answers yes or no.
 
 ## In transit
 
-- **HTTPS only**, everywhere. Cleartext traffic is disabled at the platform level.
-- Certificate pinning can be enabled for the backup endpoint, since it's the developer's
-  own server and the data is private.
+The app refuses plaintext HTTP entirely. Cleartext traffic is disabled app-wide at the platform level, so a misconfigured endpoint fails rather than falling back, and CallVault trusts only the system certificate store. A certificate a user or a proxy has installed on the phone is not trusted, which means an intercepting proxy cannot quietly sit between the app and its uploads.
 
-## The keys that ship, and the ones that don't
+CallVault does not pin certificates. Trusting the system store and refusing user-installed ones is the boundary it actually enforces, and it is stated here rather than implied.
 
-CallVault's app talks to Supabase with a **publishable key that is safe to ship** — it can
-do nothing that the database's row-level security rules don't already allow. The FilesHub
-key is **origin- and app-restricted**, so it can be used from the app's own surfaces but
-not lifted and abused elsewhere. The elevated credentials that could bypass the rules live
-only in server-side functions and never in the app.
+## Who can see what
 
-## Database rules do the real work
-
-Access control isn't a UI trick — it's enforced in the database. Every row is owner-scoped;
-admin reach is a separate, live-checked grant; and a disabled account matches no rules, so
-it sees nothing. See [Roles & access](/admin-guide/roles).
+Every recording and every call detail belongs to the account that made it. Administrator reach is a separate grant on top of that, checked against the server each time the dashboard is opened rather than remembered from a previous visit. [Roles & access](/admin-guide/roles) covers how that grant is given and taken away, and every privileged write lands in an append-only audit log described on [Plans and releases](/admin-guide/plans-and-releases).
 
 ## Honest limits
 
-- The microphone track's other-party audio is device-dependent (best on speakerphone).
-- On-device recording and the app lock can only be fully validated on a physical device.
-- The web app shows only backed-up recordings — it has no local database by design.
+- **There is no end-to-end encryption.** If that is your requirement, this is the wrong tool for you, and you should read that as the hard limit it is.
+- **A CallVault administrator can reach the audio you back up.** There are no public links to a recording, so nothing is one forwarded URL away from a stranger, but the grant itself is real reach over real audio, and a service that can reach your audio should say so.
+- **The web library shows only backed-up recordings.** It keeps no library of its own. That is by design.
+- **Deleting your account finishes only when every cloud file is gone**, and the app shows progress until then.
+
+## Complete the next step
+
+[Private cloud backup](/user-guide/sync-backup) covers what the switch turns on, and [Deleting recordings and your account](/user-guide/account-deletion) covers taking it all back.

@@ -2,13 +2,17 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const structuredData = require('./src/plugins/structured-data.js');
+
 const SITE_URL = 'https://callvault-docs.aoneahsan.com';
 const APP_URL = 'https://callvault.aoneahsan.com';
 const REPO_URL = 'https://github.com/aoneahsan/callvault-docs';
 
 const config: Config = {
   title: 'CallVault Docs',
-  tagline: 'A personal Android call-recording app — offline-first, your-server-only.',
+  tagline:
+    'CallVault records your own Android calls and keeps them on the phone unless you turn on private cloud backup.',
   favicon: 'img/favicon.svg',
 
   url: SITE_URL,
@@ -33,6 +37,9 @@ const config: Config = {
       onBrokenMarkdownLinks: 'throw',
     },
   },
+
+  // JSON-LD read back out of the pages this build rendered.
+  plugins: [structuredData],
 
   themes: [
     '@docusaurus/theme-mermaid',
@@ -70,9 +77,8 @@ const config: Config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           editUrl: `${REPO_URL}/tree/main/`,
-          // Re-enable once the repo has commits (CI uses fetch-depth: 0):
-          //   showLastUpdateTime: true,
-          //   showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
         blog: {
           routeBasePath: 'updates',
@@ -92,8 +98,7 @@ const config: Config = {
           onUntruncatedBlogPosts: 'ignore',
         },
         sitemap: {
-          changefreq: 'weekly',
-          priority: 0.5,
+          lastmod: 'date',
           ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
         },
@@ -110,13 +115,6 @@ const config: Config = {
       defaultMode: 'light',
       respectPrefersColorScheme: true,
     },
-    metadata: [
-      {
-        name: 'keywords',
-        content:
-          'callvault, android call recorder, call recording app, offline-first, flutter, supabase, self-hosted, sideload apk',
-      },
-    ],
     navbar: {
       title: 'CallVault',
       logo: {

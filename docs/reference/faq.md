@@ -1,65 +1,59 @@
 ---
-title: FAQ
-description: Straight answers about CallVault — why it isn't on Google Play, whether it records both sides, what leaves your device, iOS support, and more.
+title: "FAQ"
+description: "Straight answers about CallVault: why it isn't on Google Play, what it can hear, what leaves your device, cloud storage, and the Family plan."
 sidebar_position: 2
 tags: [faq, questions, help]
-keywords: [callvault faq, is call recording legal, both sides recording, ios support]
+keywords: [callvault faq, is call recording legal, both sides recording, call recorder cloud storage]
 ---
 
 # Frequently asked questions
 
-### Why isn't CallVault on Google Play?
+CallVault records your own Android calls and keeps them on the phone unless you turn on private cloud backup.
 
-Google Play policy bans silent call recorders, so a call-recording app like CallVault can't
-be listed. It ships as a signed APK you [sideload](/getting-started/install) instead.
+## Why isn't CallVault on Google Play?
 
-### Does it record both sides of the call?
+Google Play does not list apps that record calls the way CallVault does, so it ships as a signed APK you download from the CallVault website. [Install CallVault](/getting-started/install) walks through it.
 
-On a stock, non-rooted phone, reliably only **your side** — Android reserves the call-audio
-stream for system-privileged apps. The other party is captured best on speakerphone. Full
-both-sides audio is possible on a **rooted** device via the
-[folder-watch track](/user-guide/recording#tracks-c-and-d--folder-watch-optional-rooted).
-See [Recording](/user-guide/recording).
+## Does CallVault record both sides of a call?
 
-### Is recording my calls legal?
+It records what your phone's microphone path exposes. On many phones the other person is [clear only on speaker](/reference/troubleshooting#the-other-person-is-faint-or-missing), and an optional setting turns the speaker on for calls. Every track is labeled with its real source, and no track is called "caller" or "other party" unless that is verified.
 
-It depends on your jurisdiction and whether you're a participant. CallVault records **your
-own** calls for **personal** use, which is generally the most defensible case — but this is
-not legal advice. Read the [disclaimer](/getting-started/legal-disclaimer) before relying on
-a recording beyond your own reference.
+## Is recording my calls legal?
 
-### Does it announce that the call is being recorded?
+Recording laws vary; you are responsible for getting any consent required where you are. This is general information, not legal advice. Read the [disclaimer](/getting-started/legal-disclaimer) before you rely on a recording for anything beyond your own memory.
 
-No audible announcement. CallVault is transparent on **your** device (a live banner and a
-persistent notification) but does not beep or announce to the other party.
+## Does it announce that the call is being recorded?
 
-### What leaves my device?
+No. CallVault is visible on your phone, with a banner in the app and a persistent notification while it records, and it says nothing to the other person.
 
-Only if you're signed in with backup on: the **audio** goes to FilesHub and the **metadata**
-goes to Supabase — both storage the developer controls. No third-party analytics or ads,
-ever. Signed out, nothing leaves the device. See [Security & privacy](/architecture/security-privacy).
+## What leaves my device?
 
-### Is there an iOS version?
+Nothing, unless you sign in and turn on [private cloud backup](/user-guide/sync-backup#what-leaves-my-device). Then audio uploads as private files that only you and a CallVault administrator can reach, with no public links; the web library shows that recording to you on any browser you sign into. There are no third-party analytics or advertising SDKs.
 
-No. iOS has no call-recording API for third-party apps, so CallVault is **Android-only**.
+## Is there an iOS version?
 
-### Can I use it without signing in?
+No. CallVault is Android only, on 8.0 and newer.
 
-Yes. CallVault works fully **local-only** — it records, plays back, and searches on the
-device. Sign-in only adds cloud backup and cross-device sync.
+## Can I use CallVault without signing in?
 
-### Why is a recording capped at 100 MB?
+Yes. Guests keep up to 100 recordings on the phone, and signing in with Google removes the count limit. At 100, new recording pauses. Nothing is deleted, and playback, search, notes and export keep working.
 
-That's the per-file limit of the backup storage. Recordings over it are
-[kept on the device](/user-guide/sync-backup#the-100-mb-per-file-cap) and simply not backed
-up, rather than retried forever.
+## Why is a recording capped at 100 MB?
 
-### How do I delete my data?
+Every plan caps one recording at [100 MB for cloud backup](/user-guide/sync-backup#the-100-mb-per-file-cap). A longer call stays on the phone and works normally there; only the cloud copy is skipped. The cap is a field on the plan row rather than something fixed in the app.
 
-Delete a single recording locally or everywhere, or delete your whole account yourself from
-**Profile → danger zone**. See [Deleting recordings & your account](/user-guide/account-deletion).
+## How much cloud storage do I get?
 
-### How do I get updates?
+Free includes 2 GB, Pro 20 GB and Family 30 GB for each member; an administrator can raise a limit. [Plans and Family](/user-guide/plans-and-family) has the prices.
 
-Download the newer APK from a [GitHub Release](https://github.com/aoneahsan/callvault/releases)
-and install over the top — your data is preserved because it's the same signing key.
+## How does the Family plan work?
+
+One person owns the household, invites up to 4 others by email, and every member gets [the Family limits](/user-guide/plans-and-family#how-does-the-family-plan-work); Family is bought with at least 3 seats.
+
+## How do I delete my data?
+
+Delete a recording from its detail screen, or [delete the account](/user-guide/account-deletion) from **Profile**. Deleting the account removes your cloud recordings too, and it finishes only when every cloud file is gone; the app shows progress until then. Wait for it to finish.
+
+## How do I update CallVault?
+
+[The app checks for a new version](/getting-started/install#how-do-i-update-callvault), verifies the download's SHA-256 and signing certificate, and opens the Android installer for you, so an update never arrives without you confirming it. Android asks once to allow CallVault to install apps. You can also take a newer APK from the [releases page](https://github.com/aoneahsan/callvault-docs/releases) and open it yourself.

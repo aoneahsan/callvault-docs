@@ -40,6 +40,7 @@ const sidebars: SidebarsConfig = {
         'user-guide/web-app',
         'user-guide/profile',
         'user-guide/account-deletion',
+        'user-guide/plans-and-family',
       ],
     },
     {
@@ -55,6 +56,7 @@ const sidebars: SidebarsConfig = {
         'admin-guide/dashboard',
         'admin-guide/roles',
         'admin-guide/user-management',
+        'admin-guide/plans-and-releases',
       ],
     },
     {

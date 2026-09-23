@@ -1,6 +1,6 @@
 ---
-title: Permissions & onboarding
-description: What CallVault asks for on first run, why each permission is needed, and how it degrades gracefully if you decline the optional ones.
+title: "Permissions & onboarding"
+description: "What Capture setup asks for, what each row on it means, and what \"Capture is ready\" actually confirms."
 sidebar_position: 2
 tags: [permissions, onboarding, privacy, android]
 keywords: [callvault permissions, record audio permission, battery optimization, onboarding]
@@ -8,49 +8,41 @@ keywords: [callvault permissions, record audio permission, battery optimization,
 
 # Permissions & onboarding
 
-CallVault requests the smallest set of permissions it can. Onboarding explains each one
-*before* the system dialog appears, and lets you skip the optional ones.
+CallVault asks for the smallest set of permissions it can. **Capture setup** shows the five that need a decision from you, each with its current state; the full list the app declares is further down this page.
 
-## First run
+## Capture setup
 
-1. **What CallVault does** — a one-line summary of recording and backup.
-2. **The recording reality** — an honest note about what your device can and can't
-   capture (see [Recording](/user-guide/recording)), plus the optional auto-speakerphone
-   toggle.
-3. **Permissions, one at a time** — each request is preceded by a short card explaining
-   why it's needed. Optional permissions can be skipped.
-4. **Backup setup** — sign in to enable cross-device sync, or skip and stay local-only.
-   On the microphone track you're also prompted to exempt CallVault from battery
-   optimization.
+Open it on first run, and again any time a call goes missing. It lists three rows under **Required access**, which are the microphone, the phone state and notifications, each reading **Allowed** or **Needs action**. Below them sit two rows that are not required: the battery exemption, reading **Allowed** or **Allow**, and the optional accessibility assist, reading **Allowed** or **Open accessibility settings**.
 
-## Permissions (microphone track)
+Beneath the rows is the status line that decides everything: **Capture is ready**, or **Setup is incomplete**. Read that line, not the rows. "Capture is ready" means the three required rows are allowed. It does not mean every row on the screen reads Allowed, and it never will if you skip the optional ones on purpose.
 
-| Permission | Required | Why | If you decline |
-|---|---|---|---|
-| Record audio | Yes | Capture audio during a call | The app can't record |
-| Phone state | Yes | Detect call start/end and direction | Recording can't start automatically |
-| Foreground service (microphone) | Yes | Keep recording while the app is in the background | Recording is killed |
-| Notifications | Yes (Android 13+) | Required for the recording foreground-service notification | The service can't run |
-| Boot completed | Recommended | Re-arm recording after a reboot | Reopen the app after each restart |
-| Call log | Optional | Label a call's number when the system omits it | Some calls show "Unknown number" |
-| Contacts | Optional | Show contact names instead of numbers | Numbers only |
+## What each permission is for
 
-The BCR/folder-watch track is the cleanest footprint: it needs **no microphone
-permission** at all — only notifications and read access to the recordings folder you
-point it at.
+Three of these are the **Required access** rows on Capture setup, and two more (the battery exemption and the accessibility assist) are its optional rows. The rest are declared by the app and granted by Android without asking you anything.
 
-## Battery optimization
+| Permission | Status | Why |
+|---|---|---|
+| Microphone | Required | Record audio while a call is running |
+| Phone state | Required | Know when a call starts and when it ends |
+| Notifications | Required | Show the notification the recording service must display |
+| Foreground service (microphone) | Declared | Keep recording while you're in another app. Android grants this to the recording service; there is no prompt to answer |
+| Run at startup | Recommended | Remind you to re-arm recording after a restart |
+| Ignore battery optimizations | Requested | Stop the system killing the recorder in the background |
+| Modify audio settings | Used | Turn the speaker on when you enabled that option |
+| Install packages | Used | Open Android's installer for a verified update |
+| Biometric | Optional | The app lock |
+| Wake lock | Used | Keep the upload worker running |
+| Internet and network state | Used | Backup and update checks |
+| Storage write, Android 9 and older | Used | Export to Downloads |
 
-Some manufacturers (Samsung especially) aggressively stop background services, which can
-make CallVault miss a recording. To prevent that:
+## The accessibility assist
 
-1. Grant the battery-optimization exemption when onboarding offers it.
-2. Leave the persistent recording notification enabled.
-3. If your phone still restricts background activity, allow it in your device's app
-   settings — CallVault's **Settings → diagnostics** row shows whether the OS currently
-   allows background activity.
+This one is off unless you turn it on in Android's accessibility settings, and it is worth knowing exactly what it is. It is a declared Android accessibility service called **Call monitoring aid**. It receives window-state change events. Nothing else. It can't retrieve window content, read what's on your screen, perform gestures, or reach call audio the platform doesn't hand out. It exists so CallVault stays available for call-state signals. That is all it does.
 
-:::note Rationale before request
-CallVault never fires all the system permission dialogs at once, and never asks for the
-optional call-log or contacts permissions unless you turn on contact labelling.
-:::
+## Battery restrictions
+
+Some manufacturers stop background services hard enough to lose a recording. Allow the battery exemption when Capture setup offers it, leave the recording notification on, and if the phone still restricts CallVault, allow it in Android's own app settings too.
+
+## Complete the next step
+
+Wait for **Capture is ready**, then make one real call and play it back. [Recording your calls](/user-guide/recording) explains what you're likely to hear when you do.

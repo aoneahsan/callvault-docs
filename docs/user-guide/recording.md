@@ -1,6 +1,6 @@
 ---
-title: Recording your calls
-description: How CallVault captures calls — the microphone track that works on any phone, and the optional folder-watch track for rooted devices with both-sides audio.
+title: "Recording your calls"
+description: "CallVault records through the phone's microphone path, and it can import recordings your phone's own recorder or a BCR-compatible recorder already made. Every track carries the source CallVault actually found."
 sidebar_position: 1
 tags: [recording, capture, microphone, bcr, tracks]
 keywords: [record calls android, both sides call recording, mic recording, bcr folder watch]
@@ -8,55 +8,44 @@ keywords: [record calls android, both sides call recording, mic recording, bcr f
 
 # Recording your calls
 
-CallVault has a pluggable capture engine with two "tracks". The rest of the app — the
-list, search, backup, sync — is identical whichever track you use. Only how the audio is
-captured differs.
+CallVault records through the phone's microphone path, and it can import recordings another recorder already made. The list, the search, the notes and the backup are the same either way. Only how the audio reached the phone differs.
+
+:::note
+Recording laws vary; you are responsible for getting any consent required where you are. This is general information, not legal advice.
+:::
 
 ## Why capture is device-dependent
 
-Android reserves the actual call-audio stream (both uplink and downlink) for
-system-privileged apps. A normal sideloaded app can never hold that permission, no
-matter what it prompts for. So a stock, non-rooted phone can capture **your side clearly
-and the other party only as much as the phone's speaker emits**. This is the honest
-ceiling, and CallVault says so during onboarding rather than pretending otherwise.
+An ordinary Android app can't read the phone network's call audio, whatever any app promises. CallVault records through the phone's microphone path instead, so your own side is the reliable part, and the other person is only as clear as the phone's speaker makes them. An optional setting turns the speaker on when a call starts. Results depend on the phone.
 
-## Track B — microphone (default, no root)
+## The microphone path
 
-Works on any supported phone, including stock Samsung. When a call starts, a foreground
-service records from the microphone and stops when the call ends.
+This is the default and needs nothing unusual from the phone. A call starts, CallVault records, and the recording ends when the call does. A banner shows inside the app and a persistent notification stays visible throughout. CallVault does not announce the recording to the other person.
 
-- **Your voice:** captured clearly.
-- **The other party:** best on speakerphone; muffled or absent otherwise. CallVault can
-  **auto-enable speakerphone** at call start (a setting) to improve this, though some
-  devices block that.
-- **Automatic**, no announcement, no root.
+Two things interrupt it, both Android's rule rather than a bug. After a restart or a force-stop, Android won't let an app start microphone capture in the background, so CallVault notifies you to open it again. And a recording that comes back looking silent is flagged, not filed quietly.
 
-This is the recommended default for most people.
+## Make one test call, then decide
 
-## Tracks C and D — folder watch (optional, rooted)
+Nothing on this page tells you what your phone will do. One real call does.
 
-If you run a dedicated recorder such as **BCR (Basic Call Recorder)** — which on a rooted
-device can capture both sides at full fidelity with no announcement — CallVault can watch
-that recorder's output folder and import each new recording, reading its metadata for
-number, direction, timestamps, and SIM slot.
+Record one and play it back. If both sides are clear enough, the microphone path is your path and you are done. If the other person is faint, turn the speaker option on and try again. Still faint, and your phone maker ships its own recorder? That recorder may reach audio an ordinary app cannot, because the phone maker wrote it and is allowed to, and the next section is for you.
 
-- **Track D** consumes another recorder's output; CallVault itself needs no microphone
-  permission at all — the cleanest privacy footprint.
-- Set it up under **Settings → connect a recordings folder** and grant read access to the
-  folder your recorder writes to.
+## Import from another recorder
 
-CallVault reads those files; it does not modify or replace your recorder.
+If your phone maker's own recorder does better, or you run a BCR-compatible one, point CallVault at the folder that recorder writes to. CallVault imports each new file it finds there. It reads those files. It never modifies or replaces your recorder. A stereo import splits into its real channels.
+
+An import can also carry a contact name, when the recorder that made it saved one. That is the only way a name reaches CallVault, which never reads your address book and never asks to.
+
+## What the labels mean
+
+Every track carries the source CallVault actually found. A track is never labeled "caller" or "other party" unless that is verified, which is why some tracks read as a channel and not as a person.
+
+Where a call has at least two audible tracks whose files are still on the phone, you can ask for a combined recording: one playable mix, made on request. A one-track call has none, and nothing on the screen pretends otherwise. Read the labels before you judge the result.
 
 ## What gets captured for each call
 
-Every completed recording is stored with its number, direction (incoming/outgoing),
-contact name (if available), SIM slot, start time, duration, size, and audio format. From
-there it enters the [sync pipeline](/architecture/pipeline) for optional backup.
+Alongside the audio, CallVault stores the call's details: the number, the direction, when it started, how long it ran, which SIM handled it, the audio format and the file size. [Data layer](/architecture/data-layer) has the full list. Nothing else is kept. A recording then enters the [sync pipeline](/architecture/pipeline), but only if you signed in and turned private cloud backup on.
 
-| Requirement | Microphone (Track B) | Folder watch, rooted (Track D) |
-|---|---|---|
-| Records every call automatically | Yes | Yes |
-| Your side captured | Yes | Yes |
-| Other party captured | Speaker only | Yes |
-| No announcement | Yes | Yes |
-| Needs root | No | Yes (for the recorder) |
+## Complete the next step
+
+Heard what you needed? [Playback and export](/user-guide/playback) covers the tracks and the combined mix. Heard a problem? [Troubleshooting](/reference/troubleshooting) starts with the faint-other-side case.

@@ -37,8 +37,8 @@ keeps a clean boundary:
   imports.
 - Shared screens (profile, recording detail) are written to be web-safe; the web app plays
   audio **by streaming from a URL**, never from a local file.
-- FilesHub has a web-safe client for the browser and a separate native client (with TLS
-  pinning and streamed uploads) for the phone.
+- The private cloud backup client has a web-safe form for the browser and a separate native
+  one for the phone, which streams uploads rather than holding a whole recording in memory.
 
 The web build is the gate: it's compiled after any change that the web side could reach, so
 the boundary can't drift silently. This is why the same app can be both a real recorder and

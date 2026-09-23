@@ -1,50 +1,41 @@
 ---
-title: Data layer
-description: Where CallVault keeps things — an on-device SQLite database as the source of truth, recording metadata in Supabase, and audio backups in FilesHub.
+title: "Data layer"
+description: "The phone's own database is the source of truth. Turn private cloud backup on and a copy of each recording, plus its call details, is kept as private files on CallVault's servers."
 sidebar_position: 2
-tags: [architecture, data, sqlite, supabase, fileshub]
-keywords: [callvault data model, drift sqlite, supabase metadata, fileshub storage]
+tags: [architecture, data, sqlite, storage, backup]
+keywords: [callvault data model, drift sqlite, where are recordings stored, private cloud backup]
 ---
 
 # Data layer
 
-CallVault stores three things in three places, each with a clear job.
+CallVault keeps your recordings in two places at most, and the second one is optional.
 
 ```mermaid
 flowchart LR
-    A["Phone<br/>Drift / SQLite<br/><i>source of truth</i>"] -->|metadata| B["Supabase<br/>Postgres + RLS<br/><i>who/when/how long</i>"]
-    A -->|audio file| C["FilesHub<br/>object storage<br/><i>the recording</i>"]
-    B -.->|pull, last-write-wins| A
-    C -.->|stream by URL| D["Web app"]
-    B -.->|read own rows| D
+    A["Phone<br/>local SQLite database<br/><i>source of truth</i>"] -->|call details| B["CallVault's servers<br/>account-scoped<br/><i>who, when, how long</i>"]
+    A -->|audio file| C["CallVault's servers<br/>private files<br/><i>the recording</i>"]
+    B -.->|your own rows| D["Web library"]
+    C -.->|plays what you backed up| D
 ```
 
-## On device — the source of truth
+## On the phone, the source of truth
 
-The phone holds a local **SQLite database (Drift)**. This is authoritative: recordings are
-created here, edits (favorite, note) happen here first, and nothing is deleted here before
-it's confirmed backed up. It holds each recording's details — number, direction, contact,
-SIM slot, timestamps, duration, size, format, its pipeline status, and your note/favorite —
-plus a small key-value store for settings like theme, language, Wi-Fi-only, and retention.
+The phone holds a local SQLite database, and it is the authoritative copy. A recording is created there, a note or a favorite is written there first, and the whole library keeps working with no network connection at all. It holds each call's details: the number, the direction, when it started, how long it ran, which SIM handled it, the audio format and the file size, plus your notes and favorites, and a small settings store for things like appearance, language and the Wi-Fi-only upload preference. A contact name is stored too when an imported recording carried one; CallVault never reads your address book.
 
-## Metadata — Supabase
+Guests never go past this point. Up to 100 recordings stay on the phone without an account, and at 100 new recording pauses while everything already there keeps playing, searching and exporting. Signing in with Google removes the count limit.
 
-When you're signed in, each recording's **metadata** is mirrored to a Postgres table in
-**Supabase**, scoped to your account by row-level security. There is no audio here — only
-the facts about a call (who, when, how long, your note). That metadata is itself sensitive,
-so the rules keep every row strictly owner-scoped (with admin reach granted separately —
-see [Roles & access](/admin-guide/roles)).
+## The call details, once backup is on
 
-## Audio — FilesHub
+Each recording's details are mirrored to CallVault's servers and scoped to your account. There is no audio there. It is only the facts about a call, which are sensitive on their own, so they are account-scoped exactly as the audio is.
 
-The **audio files** go to **FilesHub** object storage. CallVault checks each file against
-the [100 MB cap](/user-guide/sync-backup#the-100-mb-per-file-cap) before uploading, verifies
-the size after, and deletes an object idempotently when you delete the recording. The web
-app plays audio by streaming it from the object's URL rather than downloading a local copy.
+## The audio, once backup is on
 
-## Why three stores
+The audio files go to CallVault's servers as private files only you and a CallVault administrator can reach. There are no public links to any of them. CallVault checks each file against the [100 MB per-file cap](/user-guide/sync-backup#the-100-mb-per-file-cap) before uploading, and deletes the stored file when you delete the recording everywhere. Your cloud usage is summed from what is actually stored, so the space comes back on the next read.
 
-Splitting audio from metadata keeps each store doing what it's best at, keeps the sensitive
-"who/when" data under strict database rules, and lets the web app work purely from the cloud
-copies while the phone keeps the authoritative offline copy. See the
-[sync pipeline](/architecture/pipeline) for how a recording flows between them.
+## Why the split
+
+Keeping the audio apart from the call details lets the web library work from the cloud copy alone, while the phone keeps the authoritative offline one. See [the sync pipeline](/architecture/pipeline) for how a recording moves between them.
+
+## Complete the next step
+
+Read [Private cloud backup](/user-guide/sync-backup) for what your plan limits, or [Security and privacy](/architecture/security-privacy) for who can reach what.

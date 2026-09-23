@@ -1,46 +1,59 @@
 ---
-title: Install the APK
-description: CallVault is not on Google Play. Install it as a signed APK from GitHub Releases and keep it updated by sideloading.
+title: "Install CallVault"
+description: "Download the signed APK from the CallVault releases page, check its SHA-256, finish Capture setup, then test one real call."
 sidebar_position: 1
-tags: [install, sideload, apk, android]
-keywords: [sideload callvault, install apk, github releases, android install]
+tags: [install, apk, android, updates]
+keywords: [install apk android, sideload call recorder, verify sha256 apk, update sideloaded app]
 ---
 
-# Install the APK
+# Install CallVault
 
-CallVault ships as a signed Android APK, not through Google Play. (Play policy bans
-silent call recorders — see [What is CallVault](/).) You install it directly and update
-it the same way.
+Download the signed APK from the CallVault releases page, allow your browser to install apps, and open the file. CallVault isn't on Google Play. Google Play does not list apps that record calls the way CallVault does, so it ships as a signed APK you download from the CallVault website. You need an Android phone on 8.0 or newer.
 
-## Requirements
+Version 1.3.0 is a prerelease for device testing; the download button on the website appears once a release is marked stable, and until then, take the APK from the releases page below.
 
-- An Android phone on **Android 8.0 (API 26) or newer**.
-- Room to sideload an app from outside the Play Store.
-- Optional, for both-sides recording: a rooted device running BCR — see [Recording](/user-guide/recording).
-
-## Install
-
-1. Open the [GitHub Releases page](https://github.com/aoneahsan/callvault/releases) and
-   pick the latest release.
-2. Download the APK attached to that release — the universal `app-release.apk` works on
-   any device; the per-ABI APKs are smaller if you know your CPU architecture.
-3. Open the downloaded file. Android will ask you to allow installing from this source —
-   grant it for your browser or files app, then confirm the install.
-4. Launch CallVault and follow the first-run [onboarding](/getting-started/permissions).
-
-## Updating
-
-There is no in-app auto-update — that would need a backend and would undercut the
-no-telemetry stance. You pull updates yourself:
-
-1. Download the newer APK from a later GitHub Release.
-2. Install it **over the top** of the existing app.
-
-Because every release is signed with the same key, installing over the top **preserves
-your data**. Installing an APK signed with a different key would force an uninstall and
-lose local recordings, so only ever update from the official releases.
-
-:::tip Keep the universal APK
-If you are unsure which ABI your phone uses, always grab the universal
-`app-release.apk` — it installs anywhere.
+:::note
+Recording laws vary; you are responsible for getting any consent required where you are. This is general information, not legal advice.
 :::
+
+## Get the APK
+
+1. Open the [public releases page](https://github.com/aoneahsan/callvault-docs/releases).
+2. Download the APK from the newest release. Its file name carries the build date, time and version.
+3. Download the `SHA256SUMS` file from the same release.
+
+## Check what you downloaded
+
+Run this where the download landed:
+
+```bash
+sha256sum callvault-*.apk
+```
+
+Compare the digest it prints against the line for your file in `SHA256SUMS`. They match, or you downloaded something other than the release. If they differ, don't install it. Download again.
+
+## Install it
+
+1. Open the APK.
+2. Allow your browser or files app to install apps when Android asks.
+3. Confirm the install.
+
+## First run
+
+Open CallVault and work through **Capture setup**. It lists microphone, phone state and notifications under **Required access**, each one reading **Allowed** or **Needs action**, while the battery exemption and the optional accessibility assist sit apart from them. Allow everything that reads **Needs action**, then read the status line beneath them: it reads **Capture is ready** or **Setup is incomplete**.
+
+Wait for **Capture is ready** before you trust CallVault with anything important. Then make one real call and play it back. That test is the only honest way to learn what your phone gives you.
+
+## How do I update CallVault?
+
+CallVault updates itself from the website release. It checks the release policy, downloads the APK, checks the file's size, SHA-256 and version code against that policy, and confirms that its package name and signing certificate match the app already installed. Only then does it open Android's installer. Nothing installs behind your back. If a check fails, the download is discarded and nothing is installed; the manual path below still works, and if neither installs, write to aoneahsan@gmail.com. Android asks once to allow CallVault to install apps, and that one permission is what the updater needs.
+
+The update screen names the version, the file and its size, with **Download verified APK** and **View release notes**.
+
+When a release becomes required, new recording pauses as soon as the phone learns of it, and the library stays readable until you install. Away from a connection nothing pauses: the phone keeps recording for 14 offline days by default (an administrator can set 1 to 30), counted from its last verified check, and past that it pauses new recording until it connects once. A server outage never uses up those days.
+
+Prefer to do it yourself? Download the newer APK from the releases page and check its SHA-256 again. Then open it exactly as you did the first time. Android replaces an app in place only when the new APK's signing certificate matches the installed one, which is the rule the updater's own signer check mirrors.
+
+## What to do next
+
+Read [Permissions and onboarding](/getting-started/permissions), which covers what each item on Capture setup asks for.

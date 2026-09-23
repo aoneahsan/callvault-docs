@@ -1,6 +1,6 @@
 ---
-title: The sync pipeline
-description: Every recording moves through a state machine — recorded, uploaded, synced — with retry-and-backoff, a terminal blocked state, and nothing deleted before it is safely synced.
+title: "The sync pipeline"
+description: "A recording is usable the moment the call ends. Each track backs up on its own, retries on an increasing delay, and CallVault never removes a phone copy before that recording is synced and its checksum verified."
 sidebar_position: 1
 tags: [architecture, pipeline, state-machine, sync]
 keywords: [sync pipeline, state machine, retry backoff, offline first pipeline]
@@ -8,11 +8,9 @@ keywords: [sync pipeline, state machine, retry backoff, offline first pipeline]
 
 # The sync pipeline
 
-CallVault is offline-first: a recording is usable the instant it's captured, and backup
-happens afterwards in the background. Each recording moves through an explicit state
-machine so its progress — and any problem — is always visible.
+A recording is usable the moment the call ends. Backup happens afterwards, in the background, and every step of it is visible on one screen.
 
-## The states
+## How a recording moves
 
 ```mermaid
 stateDiagram-v2
@@ -24,39 +22,41 @@ stateDiagram-v2
     SYNCING --> SYNCED
     SYNCED --> [*]
 
-    UPLOADING --> PENDING_UPLOAD: transient failure — retry with backoff
-    SYNCING --> UPLOADED: transient failure — retry with backoff
-    UPLOADING --> BLOCKED: over 100 MB / key rejected / unsupported
-    BLOCKED --> PENDING_UPLOAD: user taps Retry
+    UPLOADING --> PENDING_UPLOAD: transient failure, retry with backoff
+    SYNCING --> UPLOADED: transient failure, retry with backoff
 ```
 
-- **RECORDED → PENDING_UPLOAD** — the file exists locally and is queued for backup.
-- **UPLOADING → UPLOADED** — the audio is sent to FilesHub.
-- **SYNCING → SYNCED** — the metadata is mirrored to Supabase. Done.
+Those are the six states CallVault actually stores against a recording, and they read in order. **Recorded** means the file is on the phone. **Pending upload** means it is waiting its turn. **Uploaded** means the audio has reached CallVault's servers as a private file. **Synced** means the call's details are mirrored too, and the recording is done.
+
+None of this runs while private cloud backup is off. Uploads run on Wi-Fi by default, and a setting in the same place allows mobile data.
+
+## Each track moves on its own
+
+A call is often several tracks, and the pipeline treats each one separately. A track is pending upload, then uploading, then uploaded, then synced, and a track that has stopped for good is **failed**. The recording reaches Synced when every one of its tracks has, which is why a call can sit at Uploading while one track is already done.
 
 ## Retry and backoff
 
-A transient failure (a dropped connection, a temporary server hiccup) doesn't lose the
-recording — it goes back a step and is retried on an increasing delay, with separate
-counters for the upload leg and the sync leg. A flaky connection resolves itself without
-you doing anything.
+A dropped connection costs you nothing. Neither does a brief server problem. It goes back a step and is retried on an increasing delay, with separate counters for the upload leg and the details leg. A flaky connection usually resolves itself while you do nothing at all.
 
-## The blocked state
+## What stops, and why
 
-Some failures aren't worth retrying forever — a file over the
-[100 MB cap](/user-guide/sync-backup#the-100-mb-per-file-cap), a rejected key, an
-unsupported type. Those move to a terminal **blocked** state with a reason attached, leave
-the retry queue, and surface in the [Sync health](/user-guide/sync-backup#sync-health)
-"Needs attention" card. They stay safe on the device; only the cloud copy is skipped until
-you clear or retry them.
+Some failures aren't worth retrying forever. The common one is size: CallVault checks a file against the [100 MB per-file cap](/user-guide/sync-backup#the-100-mb-per-file-cap) *before* it starts uploading, so an oversize recording is never sent at all. It stays on the phone with the reason attached, and it appears under **Needs attention** in [Backup & sync health](/user-guide/sync-backup#sync-health), which is a list on that screen rather than a state on the recording. Only the cloud copy is skipped; the recording itself is where it always was. Read the reason before you retry.
 
-## Idempotency and safety
+## What happens to the phone copy
 
-- Each recording carries a stable identifier, so an upload or a metadata write that happens
-  twice (after a retry) is de-duplicated rather than doubled.
-- Retention cleanup **never** removes a local file before it is `SYNCED` and
-  checksum-verified. Your device copy is always the safety net.
+CallVault never removes a recording from the phone before that recording is synced and its checksum verified. That rule holds whatever else you choose.
 
-The work is driven both by a background worker (periodic upload → sync → cleanup) and, for
-a live UI, by a foreground coordinator that drains the queue when connectivity returns, on
-new recordings, and when the app resumes.
+What you choose is how long the phone keeps a copy after that, under **Settings → Keep local files**:
+
+- **Keep all recordings on this device**, which never removes anything.
+- **Remove from device once synced**, the default.
+- **Keep 7 days after sync**.
+- **Keep 30 days after sync**.
+
+## Where you watch it
+
+Open **Settings → Storage & sync → Backup & sync health**, which sits beside the **Private cloud backup** switch. It shows the queue, the retries, a row for each phone you use, and the **Needs attention** list, which is where anything that stopped waits with its reason attached.
+
+## Complete the next step
+
+[Private cloud backup](/user-guide/sync-backup) covers turning the switch on and what your plan allows.

@@ -1,55 +1,45 @@
 ---
-title: What is CallVault
-description: CallVault is a personal Android call-recording app — offline-first, sideloaded, and backed up only to storage you control.
+title: "What CallVault is"
+description: "CallVault records your own Android calls and keeps them on the phone. Private cloud backup is off until you turn it on."
 slug: /
 sidebar_position: 1
 sidebar_label: Introduction
-tags: [overview, android, call-recording, offline-first]
-keywords: [callvault, android call recorder, sideload apk, offline-first, self-hosted]
+tags: [overview, android, call-recording, local-first]
+keywords: [callvault, android call recorder, signed apk, call recording privacy]
 ---
 
-# What is CallVault
+# What CallVault is
 
-**CallVault is a personal Android call-recording app.** It records your own phone
-calls, keeps them offline-first on the device, and — if you want — backs the audio up
-to storage you control. There is no third-party analytics and no telemetry: the only
-servers CallVault talks to are the developer's own.
+CallVault records your own Android phone calls and keeps them on this phone. You can play a recording back, find it later by number, contact name or note, and export the audio. A web library shows what you chose to back up, and nothing else.
 
-CallVault is a single-owner tool, not a multi-tenant service. It ships with a small
-admin tier and a web dashboard, but its job is simple: keep a private, searchable
-archive of your calls that you fully control.
+:::note
+Recording laws vary; you are responsible for getting any consent required where you are. This is general information, not legal advice.
+:::
 
-## The honest reality first
+## What your phone can and can't hear
 
-On a stock, non-rooted Android phone in 2026, **an app can reliably record only your
-side of a call** (the microphone). Google closed third-party access to the call-audio
-stream in Android 10, and Play Store policy bans silent call recorders outright — which
-is why CallVault is **not on Google Play**. You install it as a signed APK.
+Start here. It decides what the rest of this site is worth to you.
 
-CallVault is transparent about this and about everything else:
+An ordinary Android app can't read the phone network's call audio. CallVault records through the phone's microphone path instead, so your own side is the reliable part, and on many phones the other person is clear only on speaker. An optional setting turns the speaker on for calls. Results depend on the phone.
 
-- It records via the microphone by default (your voice is clear; the other party is
-  best on speakerphone, which the app can enable automatically).
-- It can optionally read a rooted device's OEM/BCR recordings for both-sides audio.
-- It shows a live banner while recording and a persistent notification — it does **not**
-  announce to the other party.
+If your phone maker's own recorder does better, point CallVault at that folder and it imports those files; a stereo import is split into its real channels. Every track carries the source CallVault actually found. A track is never labeled "caller" or "other party" unless that is verified.
 
-See [Recording](/user-guide/recording) for how capture actually works, and the
-[call-recording-law disclaimer](/getting-started/legal-disclaimer) before you rely on it.
+Test one real call before you rely on any of this.
 
 ## What you get
 
 | | |
 |---|---|
-| **Offline-first** | The on-device database is the source of truth. Nothing is deleted before it is confirmed backed up. |
-| **Your-server-only** | Metadata lives in the developer's Supabase; audio backups live in FilesHub. No ads, no trackers. |
-| **A web dashboard** | Browse your backed-up recordings from any browser at [callvault.aoneahsan.com](https://callvault.aoneahsan.com). |
-| **Searchable** | Filter and search by number, contact, or note; mark favorites; add notes. |
-| **Yours to remove** | Delete a recording locally or everywhere, or delete your whole account and its data yourself. |
+| **Works without a network** | Recording, import, playback, search, notes and export work without a network connection. |
+| **Private cloud backup, off by default** | Turn it on and audio uploads as private files, reachable by you and by a CallVault administrator. There are no public links. |
+| **A web library** | Shows only backed-up recordings, at [callvault.aoneahsan.com](https://callvault.aoneahsan.com). |
+| **Guest use** | Up to 100 recordings without an account. Signing in with Google removes the count limit. |
+| **Yours to remove** | Delete one recording from this phone or everywhere, or delete the account and its cloud files. |
+
+Facts worth having early. CallVault runs on Android 8.0 and newer. It carries no third-party analytics or advertising SDKs, and there is no iOS version. It isn't on Google Play either. Google Play does not list apps that record calls the way CallVault does, so it ships as a signed APK you download from the CallVault website.
 
 ## Where to go next
 
-- **New here?** Start with [Install the APK](/getting-started/install).
-- **Using the app?** Read the [User guide](/user-guide/recording).
-- **Curious how it's built?** See the [Architecture](/architecture/pipeline).
-- **Something not working?** Try [Troubleshooting](/reference/troubleshooting) and the [FAQ](/reference/faq).
+- New here? Start with [Install CallVault](/getting-started/install).
+- Wondering what backup costs? Read [Plans and Family](/user-guide/plans-and-family).
+- Something missing from a call? Open [Troubleshooting](/reference/troubleshooting).

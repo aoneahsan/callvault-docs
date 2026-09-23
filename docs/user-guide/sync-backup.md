@@ -1,49 +1,43 @@
 ---
-title: Sync & backup
-description: What leaves your device, where it goes, and the safeguards — a 100 MB per-file cap, retry with backoff, and nothing deleted before it is confirmed synced.
+title: "Private cloud backup"
+description: "Private cloud backup is off until you turn it on. What is stored, who can reach it, the limits your plan sets, and what happens when you hit one."
 sidebar_position: 4
-tags: [sync, backup, fileshub, supabase, offline-first]
-keywords: [call recording backup, sync recordings, fileshub, supabase metadata, wifi only backup]
+tags: [backup, cloud, privacy, plans]
+keywords: [call recorder cloud backup, where are recordings stored, wifi only backup]
 ---
 
-# Sync & backup
+# Private cloud backup
 
-Backup is optional and always secondary to the copy on your phone. The on-device database
-is the source of truth; a recording is **never deleted locally before it is confirmed
-backed up and verified**.
+Private cloud backup is off until you turn it on. Until then, every recording stays on this phone and nothing about a call leaves it. Turn it on and a copy reaches the web library.
 
-## What leaves your device
+:::note
+Recording laws vary; you are responsible for getting any consent required where you are. This is general information, not legal advice.
+:::
 
-When you're signed in and backup is on, two things go to storage the developer controls:
+## Turn it on
 
-- **The audio file** goes to **FilesHub** (object storage).
-- **The metadata** — number, contact, direction, timestamps, duration, your note and
-  favorite flag — goes to **Supabase**, scoped to your account.
+1. Sign in with Google. It's the only sign-in method.
+2. On the phone, open **Settings → Storage & sync**. In the web library, open **Profile**.
+3. Turn on **Private cloud backup**.
 
-Nothing goes to any third-party analytics or ad service. If you stay signed out, CallVault
-works fully local-only and nothing leaves the device.
+Uploads run on Wi-Fi by default. A setting in the same place allows mobile data when you'd rather not wait for Wi-Fi.
 
-## The safeguards
+## What leaves my device?
 
-- **Offline-first.** Recordings are usable immediately; backup happens in the background
-  when there's a connection.
-- **Retry with backoff.** A failed upload or sync is retried automatically with an
-  increasing delay, so a flaky connection sorts itself out.
-- **Wi-Fi-only option.** Restrict backups to Wi-Fi in Settings to avoid mobile data.
-- **Retention.** Optional cleanup of old local files never removes a file that isn't yet
-  confirmed backed up and checksum-verified.
+Nothing, unless you sign in and turn on private cloud backup. Then the audio uploads as private files: you can reach them in the app and in the web library, and a CallVault administrator can reach them as well. There are no public links to a recording. The web library shows only backed-up recordings, so anything you never backed up isn't there.
 
 ## The 100 MB per-file cap
 
-FilesHub accepts files up to **100 MB**. CallVault checks the size before uploading. A
-recording over the cap can't be backed up, so it is marked **"kept on device"** with a
-clear reason rather than retrying forever. It stays safe on your phone; only the cloud
-copy is skipped.
+Every plan caps a recording at 100 MB. A longer call stays on the phone under **Needs attention**. Only the cloud copy is skipped. Export it to keep a copy elsewhere.
+
+## What your plan changes
+
+Free includes 2 GB of cloud backup, Pro 20 GB and Family 30 GB for each member; each plan also sets how many uploads an hour it accepts: 60 on Free, 300 on Pro, 600 on Family. Those are rows an administrator maintains rather than constants in the app, and an administrator can raise a limit for a single account. [Plans and Family](/user-guide/plans-and-family) has the prices and how a paid plan reaches your account.
+
+## When you hit a limit
+
+New backups pause. Nothing already stored is deleted, and the recordings on your phone are untouched. To back up more, move to a larger plan, ask an administrator to raise your limit, or delete recordings everywhere to free the space. When a paid plan ends, the same holds at the lower limit.
 
 ## Sync health
 
-**Settings → Backup & sync health** shows the queue, retry counts, and per-device
-activity. A **"Needs attention"** card lists anything that couldn't be backed up (for
-example, an oversized file or a rejected key) with a **Retry all** action, so problems are
-visible and actionable in one place. See the [sync pipeline](/architecture/pipeline) for
-how a recording moves through each state.
+Open **Settings → Storage & sync → Backup & sync health**. It sits beside the **Private cloud backup** switch. The screen shows the queue, the retries, a row for each phone you use, and a **Needs attention** list for anything that stopped, each entry carrying the reason. Read that reason before you retry.

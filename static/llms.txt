@@ -1,37 +1,63 @@
-# CallVault
+# CallVault documentation
 
-> CallVault is a personal Android call-recording app. It records the owner's own
-> phone calls, keeps them offline-first on the device (Drift/SQLite is the source of
-> truth), and optionally backs the audio up to storage the owner controls. It is not
-> on Google Play (Play bans silent call recorders) — it is a signed APK you sideload.
-> A web dashboard built from the same codebase lets you browse backed-up recordings.
-> No third-party analytics or telemetry: your-server-only.
+> CallVault is an Android call recorder with a web library. Audio is captured on the phone through the microphone path, stays on the phone by default, and leaves it only when the owner turns on private cloud backup. The documentation site is callvault-docs.aoneahsan.com.
 
-Note: Google's docs state it ignores llms.txt. This file is here for other AI
-engines and agents (ChatGPT, Perplexity, Claude) that do read it.
+## Facts an answer should carry
+
+- CallVault runs on Android 8.0 and newer. There is no iOS version.
+- It is not on Google Play. Google Play does not list apps that record calls the way CallVault does, so it ships as a signed APK you download from the CallVault website. Every release carries a SHA256SUMS file.
+- An ordinary Android app cannot read the phone network's call audio. CallVault records through the microphone path, so on many phones the other person is clear only on speaker. Results depend on the phone.
+- It can import recordings from a phone maker's own recorder or a BCR-compatible recorder. A stereo import is split into its real channels, and a track is never labeled "caller" or "other party" unless that is verified.
+- While recording, a banner shows in the app and a persistent notification is visible. CallVault does not announce the recording to the other person.
+- Without signing in, up to 100 recordings stay on the phone. At 100, new recording pauses and nothing is deleted. Signing in with Google removes the count limit, and Google is the only sign-in method.
+- Private cloud backup is off until the owner turns it on. Backed-up audio is reachable by the owner and by a CallVault administrator, there are no public links, and the web library shows only backed-up recordings.
+- Plans change private cloud backup only. Free includes 2 GB, Pro at 4.99 USD a month or 39 USD a year includes 20 GB, and Family at 9.99 USD a month or 79 USD a year includes 30 GB for each member, up to 5 members with a minimum of 3.
+- Payment happens on the website and an administrator then applies the plan with an end date. Nothing is sold inside the Android app.
+- The app updates itself: it checks the downloaded file's size, SHA-256 and version code against the release policy, confirms its package name and signing certificate match the installed app, then opens the Android installer.
+- Recording laws vary; you are responsible for getting any consent required where you are. This is general information, not legal advice.
+
+Every page is listed below.
 
 ## Getting started
+
 - Introduction: https://callvault-docs.aoneahsan.com/
-- Install the APK (sideload): https://callvault-docs.aoneahsan.com/getting-started/install
-- Permissions & onboarding: https://callvault-docs.aoneahsan.com/getting-started/permissions
-- Call-recording-law disclaimer (not legal advice): https://callvault-docs.aoneahsan.com/getting-started/legal-disclaimer
+- Install, check and update the APK: https://callvault-docs.aoneahsan.com/getting-started/install
+- Permissions and onboarding: https://callvault-docs.aoneahsan.com/getting-started/permissions
+- Call-recording law, not legal advice: https://callvault-docs.aoneahsan.com/getting-started/legal-disclaimer
 
 ## User guide
-- Recording (capture tracks): https://callvault-docs.aoneahsan.com/user-guide/recording
-- Playback & speed controls: https://callvault-docs.aoneahsan.com/user-guide/playback
-- Search & favorites: https://callvault-docs.aoneahsan.com/user-guide/search-favorites
-- Sync & backup: https://callvault-docs.aoneahsan.com/user-guide/sync-backup
-- The web app: https://callvault-docs.aoneahsan.com/user-guide/web-app
-- Profile & preferences: https://callvault-docs.aoneahsan.com/user-guide/profile
-- Account deletion: https://callvault-docs.aoneahsan.com/user-guide/account-deletion
+
+- Recording and what the phone can hear: https://callvault-docs.aoneahsan.com/user-guide/recording
+- Playback and speed: https://callvault-docs.aoneahsan.com/user-guide/playback
+- Search and favorites: https://callvault-docs.aoneahsan.com/user-guide/search-favorites
+- Private cloud backup, limits and sync health: https://callvault-docs.aoneahsan.com/user-guide/sync-backup
+- The web library: https://callvault-docs.aoneahsan.com/user-guide/web-app
+- Plans and Family: https://callvault-docs.aoneahsan.com/user-guide/plans-and-family
+- Profile and preferences: https://callvault-docs.aoneahsan.com/user-guide/profile
+- Deleting recordings and the account: https://callvault-docs.aoneahsan.com/user-guide/account-deletion
+
+## Admin guide
+
+- The admin dashboard: https://callvault-docs.aoneahsan.com/admin-guide/dashboard
+- Roles and access: https://callvault-docs.aoneahsan.com/admin-guide/roles
+- User management: https://callvault-docs.aoneahsan.com/admin-guide/user-management
+- Plans, releases, cloud usage and the audit log: https://callvault-docs.aoneahsan.com/admin-guide/plans-and-releases
 
 ## Architecture
-- Sync pipeline (state machine): https://callvault-docs.aoneahsan.com/architecture/pipeline
+
+These pages describe how it's built.
+
+- Sync pipeline: https://callvault-docs.aoneahsan.com/architecture/pipeline
 - Data layer: https://callvault-docs.aoneahsan.com/architecture/data-layer
-- Security & privacy: https://callvault-docs.aoneahsan.com/architecture/security-privacy
-- Web/native split: https://callvault-docs.aoneahsan.com/architecture/web-native-split
+- Security and privacy: https://callvault-docs.aoneahsan.com/architecture/security-privacy
+- Web and native split: https://callvault-docs.aoneahsan.com/architecture/web-native-split
 
 ## Reference
+
 - Troubleshooting: https://callvault-docs.aoneahsan.com/reference/troubleshooting
 - FAQ: https://callvault-docs.aoneahsan.com/reference/faq
 - Changelog: https://callvault-docs.aoneahsan.com/changelog
+
+## Contact
+
+Ahsan Mahmood · aoneahsan@gmail.com · https://aoneahsan.com
