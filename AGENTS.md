@@ -1,6 +1,6 @@
 # CallVault Documentation Site Guide
 
-**Last Updated:** 2026-09-15
+**Last Updated:** 2026-09-24
 
 | Guidance | Value |
 |---|---|
@@ -21,8 +21,9 @@ this repository. Never preload all pages or the app's internal planning set.
 | `docs/` | User, admin, architecture, getting-started, and reference source pages |
 | `blog/` | Release announcements and feed source |
 | `src/css/custom.css` | Brand theme |
+| `src/pages/sitemap.tsx`, `src/pages/feed.tsx` | Human `/sitemap` and `/feed` pages, fed by the `callvault-discovery` plugin data |
 | `static/` | Source images, CNAME, robots, and llms files |
-| `docusaurus.config.ts`, `sidebars.ts` | Site metadata, plugins, and navigation |
+| `docusaurus.config.ts`, `sidebars.ts` | Site metadata, plugins, and navigation; inline `callvault-discovery` plugin publishes page data and copies `updates/rss.xml` to `/feed.xml` |
 
 ## Repository rules
 

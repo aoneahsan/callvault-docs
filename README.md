@@ -34,6 +34,8 @@ Pushing to `main` builds and deploys to GitHub Pages via
 - `blog/` — release announcements; source of the RSS/Atom updates feed.
 - `docusaurus.config.ts`, `sidebars.ts` — site configuration and navigation.
 - `src/css/custom.css` — brand theme.
+- `src/pages/sitemap.tsx`, `src/pages/feed.tsx` — the `/sitemap` and `/feed` pages; `/feed.xml` is
+  copied from `updates/rss.xml` at build time.
 - `static/` — assets, `robots.txt`, `llms.txt`, `CNAME`.
 
 ## Contributing & support
