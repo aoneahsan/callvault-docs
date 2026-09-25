@@ -1,9 +1,11 @@
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CallVault compact mark">
-  <!-- Small-format derivative of callvault-brand-master.svg: three waveform bars remain distinct at 16px. -->
+  <!-- Small-format derivative of callvault-brand-master.svg: the monogram enlarged with heavier strokes and no
+       shadow, so the C, the V and the record dot stay distinct at 16px. -->
   <defs><linearGradient id="tile" x1="128" y1="64" x2="896" y2="960" gradientUnits="userSpaceOnUse"><stop stop-color="#1F899C"/><stop offset="0.52" stop-color="#166C7D"/><stop offset="1" stop-color="#0D3E4A"/></linearGradient></defs>
   <rect width="1024" height="1024" fill="url(#tile)"/>
-  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="260" y="244" width="504" height="536" rx="108" stroke-width="64"/>
-    <path d="M396 448V576 M512 350V674 M628 448V576" stroke-width="70"/>
+  <g transform="translate(512 512) scale(1.14) translate(-512 -512)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M759.8 303.6A300 300 0 1 0 759.8 720.4" stroke-width="116"/>
+    <path d="M430 392L524 632L618 392" stroke-width="96"/>
+    <circle cx="774" cy="512" r="66" fill="#FF8A70" stroke="none"/>
   </g>
 </svg>

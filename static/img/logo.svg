@@ -3,8 +3,9 @@
   <defs><linearGradient id="tile" x1="8" y1="8" x2="112" y2="112"><stop stop-color="#1F899C"/><stop offset="1" stop-color="#0D3E4A"/></linearGradient></defs>
   <rect x="8" y="8" width="104" height="104" rx="24" fill="url(#tile)"/>
   <g transform="translate(8 8) scale(.1015625)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="278" y="250" width="468" height="524" rx="100" stroke-width="52"/>
-    <path d="M360 477V547 M436 404V620 M512 352V672 M588 404V620 M664 477V547" stroke-width="50"/>
+    <path d="M759.8 303.6A300 300 0 1 0 759.8 720.4" stroke-width="104"/>
+    <path d="M430 392L524 632L618 392" stroke-width="80"/>
+    <circle cx="774" cy="512" r="58" fill="#FF8A70" stroke="none"/>
   </g>
   <text x="136" y="76" fill="#115362" font-family="Manrope, Avenir Next, Segoe UI, sans-serif" font-size="52" font-weight="750" letter-spacing="-1.5">CallVault</text>
 </svg>

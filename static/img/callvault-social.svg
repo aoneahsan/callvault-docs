@@ -18,8 +18,9 @@
   </g>
   <rect x="84" y="92" width="256" height="256" rx="60" fill="#FFFFFF" fill-opacity="0.08" stroke="#DDFDFF" stroke-opacity="0.2"/>
   <g transform="translate(84 92) scale(.25)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="278" y="250" width="468" height="524" rx="100" stroke-width="52"/>
-    <path d="M360 477V547 M436 404V620 M512 352V672 M588 404V620 M664 477V547" stroke-width="50"/>
+    <path d="M759.8 303.6A300 300 0 1 0 759.8 720.4" stroke-width="104"/>
+    <path d="M430 392L524 632L618 392" stroke-width="80"/>
+    <circle cx="774" cy="512" r="58" fill="#FF8A70" stroke="none"/>
   </g>
   <g font-family="Manrope, Avenir Next, Segoe UI, sans-serif">
     <text x="390" y="207" fill="#FFFFFF" font-size="90" font-weight="760" letter-spacing="-3">CallVault</text>
