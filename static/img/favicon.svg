@@ -1,5 +1,5 @@
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CallVault compact mark">
-  <!-- Small-format derivative of callvault-brand-master.svg: the monogram enlarged with heavier strokes and no
+  <!-- Small-format derivative of callvault-monogram.svg: the monogram enlarged with heavier strokes and no
        shadow, so the C, the V and the record dot stay distinct at 16px. -->
   <defs><linearGradient id="tile" x1="128" y1="64" x2="896" y2="960" gradientUnits="userSpaceOnUse"><stop stop-color="#1F899C"/><stop offset="0.52" stop-color="#166C7D"/><stop offset="1" stop-color="#0D3E4A"/></linearGradient></defs>
   <rect width="1024" height="1024" fill="url(#tile)"/>

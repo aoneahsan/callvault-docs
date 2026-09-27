@@ -1,5 +1,5 @@
 <svg width="480" height="120" viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CallVault">
-  <!-- Generated lockup; mark geometry comes from assets/brand/callvault-brand-master.svg. -->
+  <!-- Generated lockup; mark geometry comes from assets/brand/callvault-monogram.svg. -->
   <defs><linearGradient id="tile" x1="8" y1="8" x2="112" y2="112"><stop stop-color="#1F899C"/><stop offset="1" stop-color="#0D3E4A"/></linearGradient></defs>
   <rect x="8" y="8" width="104" height="104" rx="24" fill="url(#tile)"/>
   <g transform="translate(8 8) scale(.1015625)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
