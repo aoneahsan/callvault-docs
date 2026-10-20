@@ -9,14 +9,15 @@ The public documentation site for **CallVault** — a personal Android call-reco
 ## Develop
 
 ```bash
-corepack enable     # use the pinned Yarn version (yarn@4.17.1)
-yarn install
+corepack enable     # use the pinned Yarn version (yarn@4.18.1)
+yarn install --immutable
 yarn start          # local dev server
 ```
 
 ## Build
 
 ```bash
+yarn typecheck
 yarn build          # production build — also validates every internal link
 yarn serve          # serve the built site to verify search + rendering
 ```

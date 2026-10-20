@@ -2,10 +2,15 @@
 
 **Last Updated:** 2026-10-20
 
-| Guidance | Value |
-|---|---|
-| Context Budget Last Verified | 2026-09-15 — CLAUDE.md 2,860 B / no PENDING-TASKS.md; re-check due 2026-10-15 |
 
+| Context | Value |
+|---|---|
+| Last optimized | 2026-10-20 |
+| Next routine optimization eligible | 2026-11-19 |
+| Guide bytes | 3,983 B |
+| Covered subtree | Public Docusaurus repository; dependencies and generated site output excluded |
+| Method | Compact repository router with public product facts resolved from approved sources |
+| Fleet record | `/home/ahsan/Documents/01-code/docs/tracking/project-context-budget-tracker.json` |
 This public repository builds the CallVault Docusaurus documentation site. `CLAUDE.md` and `AGENTS.md`
 are mirrors; read only the file native to the active agent. Product source and internal engineering records
 live in the sibling `../callvault/` repository.

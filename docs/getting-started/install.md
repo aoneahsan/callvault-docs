@@ -10,7 +10,7 @@ keywords: [install apk android, sideload call recorder, verify sha256 apk, updat
 
 Download the signed APK from the CallVault releases page, allow your browser to install apps, and open the file. CallVault isn't on Google Play. Google Play does not list apps that record calls the way CallVault does, so it ships as a signed APK you download from the CallVault website. You need an Android phone on 8.0 or newer.
 
-Version 1.3.0 is a prerelease for device testing; the download button on the website appears once a release is marked stable, and until then, take the APK from the releases page below.
+Version 1.4.0 is a prerelease for device testing; the download button on the website appears once a release is marked stable, and until then, take the APK from the releases page below.
 
 :::note
 Recording laws vary; you are responsible for getting any consent required where you are. This is general information, not legal advice.

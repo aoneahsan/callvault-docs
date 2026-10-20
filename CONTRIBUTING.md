@@ -5,8 +5,8 @@ repository; contributions are welcome through pull requests.
 
 ## Governance
 
-- **`main` is protected.** All changes land through a pull request — nobody, including
-  contributors with write access, pushes directly to `main`.
+- **`main` is protected.** Contributor changes land through a pull request; ordinary write access cannot
+  push directly to `main`.
 - **A PR needs one approving review and a green CI build** (the GitHub Pages `Build` job:
   `yarn install` + `yarn build`, which also validates every internal link) before it can be
   merged.
@@ -25,8 +25,9 @@ repository; contributions are welcome through pull requests.
 
 ```bash
 corepack enable        # use the pinned Yarn version
-yarn install
+yarn install --immutable
 yarn start             # local dev server
+yarn typecheck
 yarn build             # production build — also the link checker; must pass before a PR
 ```
 
