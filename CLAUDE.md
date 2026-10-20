@@ -1,6 +1,6 @@
 # CallVault Documentation Site Guide
 
-**Last Updated:** 2026-09-24
+**Last Updated:** 2026-10-20
 
 | Guidance | Value |
 |---|---|
@@ -63,3 +63,9 @@ integration gate; it must complete without broken internal links.
 The fleet record is `/home/ahsan/Documents/01-code/docs/tracking/project-context-budget-tracker.json`.
 Skip another context-management pass until 30 full days after this verification. Ordinary documentation and
 feature work is not a context audit.
+
+## Stop-work Git gate
+
+<!-- RULE:stop-work-git-gate v2026-10-20 -->
+
+Before stopping, commit every legitimate change and work-progress checkpoint in this repository and each independent nested repository, fetch and merge the designated upstream, push the documented working branch, then verify an empty worktree and `0 0` ahead/behind. Never stash, discard, reset, rebase, or force-push. If synchronization is blocked, report the exact repository, branch, blocker, and next action instead of calling the work complete. The full workflow remains authoritative in `~/.claude/rules/git-workflow.md`.
