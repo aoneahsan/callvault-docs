@@ -52,7 +52,7 @@ One person owns the household, invites up to 4 others by email, and every member
 
 ## How do I delete my data?
 
-Delete a recording from its detail screen, or [delete the account](/user-guide/account-deletion) from **Profile**. Deleting the account removes your cloud recordings too, and it finishes only when every cloud file is gone; the app shows progress until then. Wait for it to finish.
+Delete a recording from its detail screen, or start [account deletion](/user-guide/account-deletion) from **Profile**. CallVault removes known backed-up files in batches and keeps an upload with an unclear outcome open for administrator review, so a retry message does not mean that the cloud copy has already gone. If recording deletion says **"Still processing on the server"**, retry from that recording's detail screen. If account deletion shows that message, reopen **Delete account** from Profile. For a different error or one that persists, email **aoneahsan@gmail.com** from your account address.
 
 ## How do I update CallVault?
 

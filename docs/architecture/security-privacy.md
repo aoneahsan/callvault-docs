@@ -35,7 +35,7 @@ Every recording and every call detail belongs to the account that made it. Admin
 - **There is no end-to-end encryption.** If that is your requirement, this is the wrong tool for you, and you should read that as the hard limit it is.
 - **A CallVault administrator can reach the audio you back up.** There are no public links to a recording, so nothing is one forwarded URL away from a stranger, but the grant itself is real reach over real audio, and a service that can reach your audio should say so.
 - **The web library shows only backed-up recordings.** It keeps no library of its own. That is by design.
-- **Deleting your account finishes only when every cloud file is gone**, and the app shows progress until then.
+- **Account deletion can need another pass.** Profile shows processing, success or an error message. If it says **"Still processing on the server"**, reopen **Delete account** to resume the saved request. For another error or one that persists, contact CallVault using the address on [Deleting recordings and your account](/user-guide/account-deletion). An upload with an unclear outcome remains open for administrator review; an empty file listing does not prove its cloud copy is gone.
 
 ## Complete the next step
 
