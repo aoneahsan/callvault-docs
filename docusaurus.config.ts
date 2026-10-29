@@ -291,10 +291,6 @@ const config: Config = {
             { label: 'Updates', to: '/updates' },
             { label: 'Feed', to: '/feed' },
             { label: 'Sitemap', to: '/sitemap' },
-            {
-              label: 'Support the developer',
-              href: 'https://aoneahsan.com/payment?project-id=callvault-docs&project-identifier=com.aoneahsan.callvault',
-            },
           ],
         },
       ],

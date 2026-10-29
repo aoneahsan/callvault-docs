@@ -39,9 +39,8 @@ Pushing to `main` builds and deploys to GitHub Pages via
   copied from `updates/rss.xml` at build time.
 - `static/` — assets, `robots.txt`, `llms.txt`, `CNAME`.
 
-## Contributing & support
+## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Support the developer at
-[aoneahsan.com/payment](https://aoneahsan.com/payment?project-id=callvault-docs&project-identifier=com.aoneahsan.callvault).
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Built by Ahsan Mahmood · aoneahsan@gmail.com

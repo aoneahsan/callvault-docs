@@ -43,12 +43,6 @@ yarn build             # production build — also the link checker; must pass b
 Use [Conventional Commits](https://www.conventionalcommits.org/) — e.g.
 `docs: clarify the microphone track`, `fix: correct a broken link`.
 
-## Support
-
-If CallVault has been useful and you'd like to support its development, you can do so at
-**[aoneahsan.com/payment](https://aoneahsan.com/payment?project-id=callvault-docs&project-identifier=com.aoneahsan.callvault)**.
-Please do not add GitHub Sponsors, Open Collective, or other donation links.
-
 ## Code of conduct
 
 Be respectful and constructive. Report unacceptable behaviour to
