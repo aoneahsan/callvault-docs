@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import type { Config, Plugin } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
@@ -10,6 +11,37 @@ const structuredData = require('./src/plugins/structured-data.js');
 const SITE_URL = 'https://callvault-docs.aoneahsan.com';
 const APP_URL = 'https://callvault.aoneahsan.com';
 const REPO_URL = 'https://github.com/aoneahsan/callvault-docs';
+
+/** A source's last committed edit, not the build day or a post's publication day. */
+function sourceDay(file: string): string {
+  const day = execFileSync('git', ['log', '-1', '--format=%cs', '--', file], {
+    cwd: process.cwd(), encoding: 'utf8',
+  }).trim();
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) {
+    throw new Error(`Sitemap source has no committed change date: ${file}`);
+  }
+  return day;
+}
+
+/** Blog slugs come from the same front matter that creates their routes. */
+async function blogSourceDays(): Promise<Map<string, string>> {
+  const days = new Map<string, string>();
+  for (const file of await fs.readdir('blog')) {
+    if (!/\.mdx?$/.test(file)) continue;
+    const source = await fs.readFile(path.join('blog', file), 'utf8');
+    const frontMatter = /^---\r?\n([\s\S]*?)\r?\n---/.exec(source)?.[1];
+    if (!frontMatter) throw new Error(`Blog post has no front matter: ${file}`);
+    if (/^(?:draft|unlisted):\s*true\s*$/m.test(frontMatter)) continue;
+    const slug = /^slug:\s*['\"]?([^'\"\r\n]+)['\"]?\s*$/m.exec(frontMatter)?.[1]
+      ?? file.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.mdx?$/, '');
+    const route = `/updates/${slug.trim().replace(/^\/+|\/+$/g, '')}`;
+    if (days.has(route)) throw new Error(`Duplicate blog sitemap route: ${route}`);
+    days.set(route, sourceDay(path.join('blog', file)));
+  }
+  return days;
+}
+
+const newestDay = (days: Iterable<string>): string => [...days].sort().at(-1) ?? '';
 
 /** Shape published to `/sitemap` and `/feed` through `usePluginData('callvault-discovery')`. */
 type DiscoveryEntry = { title: string; description: string; permalink: string; tags: string[] };
@@ -220,8 +252,56 @@ const config: Config = {
         },
         sitemap: {
           lastmod: 'date',
-          ignorePatterns: ['/tags/**'],
+          changefreq: null,
+          priority: null,
+          ignorePatterns: [
+            '/search', '/tags', '/tags/**',
+            '/updates/archive', '/updates/authors',
+            '/updates/tags', '/updates/tags/**',
+          ],
           filename: 'sitemap.xml',
+          createSitemapItems: async ({ defaultCreateSitemapItems, ...params }) => {
+            const items = await defaultCreateSitemapItems(params);
+            const blogDays = await blogSourceDays();
+            const newestPostDay = newestDay(blogDays.values());
+            const routeOf = (url: string): string => new URL(url).pathname;
+            const withDates = items.map((item) => {
+              const route = routeOf(item.url);
+              const blogDay = blogDays.get(route);
+              if (blogDay) return { ...item, lastmod: blogDay };
+              if (route === '/updates') {
+                if (!newestPostDay) throw new Error('Blog index has no dated posts');
+                return { ...item, lastmod: newestPostDay };
+              }
+              if (route === '/feed') {
+                return { ...item, lastmod: newestDay([sourceDay('src/pages/feed.tsx'), newestPostDay]) };
+              }
+              return item;
+            });
+
+            // Generated category indexes change as their listed docs change.
+            const categoriesDated = withDates.map((item) => {
+              if (item.lastmod || routeOf(item.url) === '/sitemap') return item;
+              const route = routeOf(item.url);
+              const children = withDates.filter((child) =>
+                routeOf(child.url).startsWith(`${route}/`) && child.lastmod);
+              if (!children.length) throw new Error(`Sitemap route has no truthful date: ${route}`);
+              return { ...item, lastmod: newestDay(children.map((child) => String(child.lastmod))) };
+            });
+            const sitemapDay = newestDay([
+              sourceDay('src/pages/sitemap.tsx'),
+              ...categoriesDated.filter((item) => routeOf(item.url) !== '/sitemap')
+                .map((item) => String(item.lastmod)),
+            ]);
+            return categoriesDated.map((item) => {
+              const dated = routeOf(item.url) === '/sitemap'
+                ? { ...item, lastmod: sitemapDay } : item;
+              if (!/^\d{4}-\d{2}-\d{2}$/.test(String(dated.lastmod ?? ''))) {
+                throw new Error(`Sitemap route has no truthful date: ${dated.url}`);
+              }
+              return dated;
+            });
+          },
         },
         theme: {
           customCss: './src/css/custom.css',
