@@ -1,13 +1,13 @@
 # CallVault Documentation Site Guide
 
-**Last Updated:** 2026-10-20
+**Last Updated:** 2026-10-31
 
 
 | Context | Value |
 |---|---|
 | Last optimized | 2026-10-20 |
 | Next routine optimization eligible | 2026-11-19 |
-| Guide bytes | 3,983 B |
+| Guide bytes | 4,086 B |
 | Covered subtree | Public Docusaurus repository; dependencies and generated site output excluded |
 | Method | Compact repository router with public product facts resolved from approved sources |
 | Fleet record | `/home/ahsan/Documents/01-code/docs/tracking/project-context-budget-tracker.json` |
@@ -42,8 +42,9 @@ this repository. Never preload all pages or the app's internal planning set.
   metadata, and visible content consistent.
 - Public README headings follow the repository Markdown anchor/TOC rules. Internal agent guides do not need
   public-document anchor ceremony.
-- Do not start `yarn start` or `yarn serve`. Do not publish or deploy from a sub-agent. Pushing `main`
-  triggers the existing GitHub Pages workflow.
+- Do not start `yarn start` or `yarn serve`. Do not publish or deploy from a sub-agent. The main session
+  deploys a locally verified build to GitHub Pages manually, using the fast-forward `gh-pages` procedure in
+  `README.md`. No GitHub Actions CI/CD.
 
 ## Generated and excluded paths
 
