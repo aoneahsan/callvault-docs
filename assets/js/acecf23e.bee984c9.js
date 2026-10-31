@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcallvault_docs=self.webpackChunkcallvault_docs||[]).push([["3220"],{1912(a){a.exports=JSON.parse('{"blogBasePath":"/updates","blogTitle":"CallVault updates","authorsListPath":"/updates/authors"}')}}]);

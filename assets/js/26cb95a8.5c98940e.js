@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcallvault_docs=self.webpackChunkcallvault_docs||[]).push([["6262"],{3357(l){l.exports=JSON.parse('{"tag":{"label":"changelog","permalink":"/tags/changelog","allTagsPath":"/tags","count":1,"items":[{"id":"changelog","title":"Changelog","description":"Release notes for CallVault, latest first.","permalink":"/changelog"}],"unlisted":false}}')}}]);

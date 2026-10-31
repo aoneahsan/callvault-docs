@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcallvault_docs=self.webpackChunkcallvault_docs||[]).push([["2747"],{9050(e){e.exports=JSON.parse('{"tags":[{"label":"Release","permalink":"/updates/tags/release","description":"CallVault release announcements.","count":3},{"label":"Android","permalink":"/updates/tags/android","description":"Posts about the Android app.","count":3}]}')}}]);
