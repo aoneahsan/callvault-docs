@@ -56,8 +56,21 @@ fi
 ```
 
 The push is an ordinary fast-forward push. If it is rejected because `gh-pages` moved, rerun the commands
-against the latest branch; do not force-push. After the first publish, set GitHub Pages to **Deploy from a
-branch → gh-pages → /(root)** and keep `callvault-docs.aoneahsan.com` as its custom domain with HTTPS.
+against the latest branch; do not force-push. After the first publish, switch GitHub Pages to the branch
+source and request its first build. The branch push happened before the source switch, so it cannot trigger
+that first build by itself:
+
+```bash
+gh api -X PUT repos/aoneahsan/callvault-docs/pages --input - <<'JSON'
+{"build_type":"legacy","source":{"branch":"gh-pages","path":"/"}}
+JSON
+gh api -X POST repos/aoneahsan/callvault-docs/pages/builds
+gh api repos/aoneahsan/callvault-docs/pages --jq '{build_type,source,cname,https_enforced}'
+```
+
+Keep `callvault-docs.aoneahsan.com` as the custom domain with HTTPS. Confirm the live HTML matches the
+just-published `build/index.html` before calling the deploy complete. Subsequent `gh-pages` pushes trigger
+the configured branch build.
 
 <a id="structure"></a>
 ## 🗂️ Structure&nbsp;[#](#structure)
