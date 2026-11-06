@@ -31,7 +31,7 @@ It is off until you turn it on. Turn it on and audio uploads as private files on
 
 ## Appearance and language
 
-Choose **light**, **dark**, or follow the system setting. The web remembers it per browser.
+The palette icon in every header opens one panel: theme, colour, text size, corners, spacing, font, background and motion. Your choice is kept on this device and, when you're signed in, on your account, so a second device opens looking the same.
 
 CallVault ships in **English** and **Urdu (اردو)**. Urdu renders right-to-left and the whole interface mirrors with it, web library included. The app follows your phone or browser locale, and you can set it explicitly here.
 

@@ -35,6 +35,10 @@ Nothing is sold inside the Android app. A confirmed manual period does not renew
 
 One person owns the household and invites the others by email. A household holds up to 5 members. Family requests start at 3 paid seats, even if fewer people have joined; the owner must create the household before requesting the plan. Each member then gets the Family limits, including 30 GB of cloud backup. Each signs in with their own Google account, the only sign-in method.
 
+## How do invites work?
+
+Profile has your invite link. When 3 people you invite sign in with Google, you get 1 month of Pro, up to 6 months a year. CallVault's team can change these numbers, and Profile always shows the current ones. You see how many people joined, never who they are.
+
 ## Leaving a household
 
 Leave or be removed, and the membership goes at once. You return to your own plan or to Free immediately: nothing stored is deleted, and new backups pause at the lower limit. The household keeps its plan until its end date, even below 3 members.
