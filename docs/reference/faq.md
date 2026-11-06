@@ -12,7 +12,7 @@ CallVault records your own Android calls and keeps them on the phone unless you 
 
 ## Why isn't CallVault on Google Play?
 
-Google Play does not list apps that record calls the way CallVault does, so it ships as a signed APK you download from the CallVault website. [Install CallVault](/getting-started/install) walks through it.
+CallVault isn't on Google Play. It ships as a signed APK you download from the CallVault website. [Install CallVault](/getting-started/install) walks through it.
 
 ## Does CallVault record both sides of a call?
 
