@@ -136,10 +136,32 @@ const PAGES = [
   ['getting-started/install.html', howTo],
 ];
 
+const NOINDEX_PAGES = ['search.html', 'search', 'tags.html', 'tags', 'updates/archive.html', 'updates/archive', 'updates/authors.html', 'updates/authors', 'updates/tags.html', 'updates/tags', '404.html'];
+
+function htmlFilesUnder(target) {
+  if (!fs.existsSync(target)) return [];
+  if (fs.statSync(target).isFile()) return [target];
+  return fs.readdirSync(target, {withFileTypes: true}).flatMap((entry) => {
+    const full = path.join(target, entry.name);
+    if (entry.isDirectory()) return htmlFilesUnder(full);
+    return entry.name.endsWith('.html') ? [full] : [];
+  });
+}
+
 module.exports = function structuredDataPlugin() {
   return {
     name: 'callvault-structured-data',
     async postBuild({outDir}) {
+      // Utility pages left out of the sitemap must also say noindex, in the name=robots
+      // form crawlers read. The search plugin's own tag uses property=robots.
+      for (const relative of NOINDEX_PAGES) {
+        for (const full of htmlFilesUnder(path.join(outDir, relative))) {
+          const html = fs.readFileSync(full, 'utf8');
+          if (/<meta[^>]+name=["']?robots["']?[^>]*noindex/.test(html)) continue;
+          const tag = '<meta name="robots" content="noindex, follow">';
+          fs.writeFileSync(full, html.replace('</head>', `${tag}</head>`), 'utf8');
+        }
+      }
       for (const [file, build] of PAGES) {
         const full = path.join(outDir, file);
         if (!fs.existsSync(full)) continue;
