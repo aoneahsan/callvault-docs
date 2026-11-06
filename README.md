@@ -35,15 +35,15 @@ have been committed and pushed:
 set -e
 test "$(git branch --show-current)" = main
 test -z "$(git status --porcelain)"
-git fetch origin main
-test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
+git fetch o main
+test "$(git rev-parse HEAD)" = "$(git rev-parse o/main)"
 yarn typecheck
 yarn build
 test -f build/CNAME && test -f build/.nojekyll
 CALLVAULT_PAGES_TEMP="$(mktemp -d)"
-git clone git@github.com:aoneahsan/callvault-docs.git "$CALLVAULT_PAGES_TEMP/site"
-if git -C "$CALLVAULT_PAGES_TEMP/site" show-ref --verify --quiet refs/remotes/origin/gh-pages; then
-  git -C "$CALLVAULT_PAGES_TEMP/site" switch --track origin/gh-pages
+git clone -o o git@github.com:aoneahsan/callvault-docs.git "$CALLVAULT_PAGES_TEMP/site"
+if git -C "$CALLVAULT_PAGES_TEMP/site" show-ref --verify --quiet refs/remotes/o/gh-pages; then
+  git -C "$CALLVAULT_PAGES_TEMP/site" switch --track o/gh-pages
 else
   git -C "$CALLVAULT_PAGES_TEMP/site" switch --orphan gh-pages
 fi
@@ -51,7 +51,7 @@ rsync -a --delete --exclude='.git/' build/ "$CALLVAULT_PAGES_TEMP/site/"
 git -C "$CALLVAULT_PAGES_TEMP/site" add -A
 if ! git -C "$CALLVAULT_PAGES_TEMP/site" diff --cached --quiet; then
   git -C "$CALLVAULT_PAGES_TEMP/site" commit -m "Deploy CallVault Docs from $(git rev-parse --short HEAD)"
-  git -C "$CALLVAULT_PAGES_TEMP/site" push origin gh-pages
+  git -C "$CALLVAULT_PAGES_TEMP/site" push o gh-pages
 fi
 ```
 

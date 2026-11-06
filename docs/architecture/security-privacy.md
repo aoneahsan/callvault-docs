@@ -3,7 +3,7 @@ title: "Security & privacy"
 description: "Recordings sit in app-private storage no other app can read, uploads go over HTTPS only, and there is no end-to-end encryption. The limits are here beside the promises."
 sidebar_position: 3
 tags: [security, privacy, encryption, app-lock]
-keywords: [callvault security, privacy, app lock, https only, no telemetry]
+keywords: [callvault security, privacy, app lock, https only]
 ---
 
 # Security & privacy
@@ -12,7 +12,7 @@ Call recordings are among the most sensitive things a phone holds. CallVault is 
 
 ## What CallVault doesn't collect
 
-There is no third-party analytics and no advertising SDK in the app; while private cloud backup is off, which is its state until you turn it on, nothing about a call leaves the phone at all. Stay signed out and the phone keeps working exactly the same.
+There's no advertising SDK. Analytics counts screens and features only; see the Privacy Policy; while private cloud backup is off, which is its state until you turn it on, nothing about a call leaves the phone at all. Stay signed out and the phone keeps working exactly the same.
 
 ## On the phone
 

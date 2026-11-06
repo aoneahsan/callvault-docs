@@ -46,11 +46,11 @@ Wait for **Capture is ready** before you trust CallVault with anything important
 
 ## How do I update CallVault?
 
-CallVault updates itself from the website release. It checks the release policy, downloads the APK, checks the file's size, SHA-256 and version code against that policy, and confirms that its package name and signing certificate match the app already installed. Only then does it open Android's installer. Nothing installs behind your back. If a check fails, the download is discarded and nothing is installed; the manual path below still works, and if neither installs, write to aoneahsan@gmail.com. Android asks once to allow CallVault to install apps, and that one permission is what the updater needs.
+CallVault updates itself from the website release. It checks the release policy, downloads the APK, checks the file's size, SHA-256, version code and version name against that policy, and confirms that its package name and signing certificate match the app already installed. Only then does it open Android's installer. Nothing installs behind your back. If a check fails, the download is discarded and nothing is installed; the manual path below still works, and if neither installs, write to aoneahsan@gmail.com. Android asks once to allow CallVault to install apps, and that one permission is what the updater needs.
 
 The update screen names the version, the file and its size, with **Download verified APK** and **View release notes**.
 
-When a release becomes required, new recording pauses as soon as the phone learns of it, and the library stays readable until you install. Away from a connection nothing pauses: the phone keeps recording for 14 offline days by default (an administrator can set 1 to 30), counted from its last verified check, and past that it pauses new recording until it connects once. A server outage never uses up those days.
+When a release becomes required, new recording pauses as soon as the phone learns of it, and the library stays readable until you install. Away from a connection nothing pauses: the phone keeps recording for 14 offline days by default (an administrator can set 1 to 365), counted from its last verified check, and past that it pauses new recording until it connects once. A server outage never uses up those days.
 
 Prefer to do it yourself? Download the newer APK from the releases page and check its SHA-256 again. Then open it exactly as you did the first time. Android replaces an app in place only when the new APK's signing certificate matches the installed one, which is the rule the updater's own signer check mirrors.
 

@@ -243,7 +243,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             title: 'CallVault updates',
             description: 'Release notes and announcements for CallVault.',
-            copyright: `Copyright © ${new Date().getFullYear()} Ahsan Mahmood.`,
+            copyright: `Copyright © ${new Date().getFullYear()} CallVault.`,
             xslt: true,
           },
           onInlineTags: 'warn',
@@ -374,7 +374,20 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Built by Ahsan Mahmood (aoneahsan@gmail.com). CallVault © ${new Date().getFullYear()}.`,
+      copyright: `CallVault © ${new Date().getFullYear()}.`,
+    },
+    mermaid: {
+      theme: { light: 'base', dark: 'base' },
+      options: {
+        themeVariables: {
+          primaryColor: '#d6f3f7',
+          primaryBorderColor: '#166c7d',
+          primaryTextColor: '#0d3e4a',
+          lineColor: '#166c7d',
+          secondaryColor: '#eef7f9',
+          tertiaryColor: '#f6fbfc',
+        },
+      },
     },
     prism: {
       theme: prismThemes.github,

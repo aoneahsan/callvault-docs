@@ -36,7 +36,7 @@ Test one real call before you rely on any of this.
 | **Guest use** | Up to 100 recordings without an account. Signing in with Google removes the count limit. |
 | **Yours to remove** | Delete one recording from this phone or everywhere, or delete the account and its cloud files. |
 
-Facts worth having early. CallVault runs on Android 8.0 and newer. It carries no third-party analytics or advertising SDKs, and there is no iOS version. It isn't on Google Play either. Google Play does not list apps that record calls the way CallVault does, so it ships as a signed APK you download from the CallVault website.
+Facts worth having early. CallVault runs on Android 8.0 and newer. It has no ads. It counts usage with analytics services, and they never receive recordings, notes, numbers or names, and there is no iOS version. It isn't on Google Play either. Google Play does not list apps that record calls the way CallVault does, so it ships as a signed APK you download from the CallVault website.
 
 ## Where to go next
 
