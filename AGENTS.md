@@ -5,8 +5,8 @@
 
 | Context | Value |
 |---|---|
-| Last optimized | 2026-10-20 |
-| Next routine optimization eligible | 2026-11-19 |
+| Last optimized | 2026-11-06 |
+| Next routine optimization eligible | 2026-12-06 |
 | Guide bytes | 4,086 B |
 | Covered subtree | Public Docusaurus repository; dependencies and generated site output excluded |
 | Method | Compact repository router with public product facts resolved from approved sources |
