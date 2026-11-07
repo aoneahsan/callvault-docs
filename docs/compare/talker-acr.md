@@ -19,8 +19,7 @@ Stay on Talker ACR if one of these is you:
 Move if these matter more:
 
 - Backup on the free plan: Talker lists cloud backup under Premium, and CallVault’s Free plan includes 2 GB.
-- A web library for your backed-up recordings.
-- No ads, on any plan.
+- That free backup opens in a browser too, in the same library paid plans get.
 
 ## How do you move?
 

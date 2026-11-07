@@ -18,9 +18,8 @@ Stay on Call Recorder Automatic if one of these is you:
 
 Move if these matter more:
 
-- No ads, on any plan.
-- A web library for your backed-up recordings.
-- Import from another recorder’s folder.
+- Google Play marks this one as containing ads. CallVault shows none on any plan.
+- CallVault never reads your contacts. It has no caller ID to feed.
 
 ## How do you move?
 

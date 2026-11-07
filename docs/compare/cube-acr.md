@@ -19,9 +19,9 @@ Stay on Cube ACR if one of these is you:
 
 Move if these matter more:
 
-- A web library for your backed-up recordings.
-- Import from another recorder’s folder.
-- No ads, on any plan.
+- Cube ACR’s Play listing says it contains ads. CallVault has none, free or paid.
+- Your old calls can come along: CallVault imports from a recorder’s folder, though we haven’t tested Cube ACR’s files yet.
+- Backups play in a browser, at work or at home. Its listing doesn’t mention that.
 
 ## How do you move?
 

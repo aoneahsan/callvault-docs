@@ -18,9 +18,9 @@ Stay on CallApp if one of these is you:
 
 Move if these matter more:
 
-- A recorder and nothing else: it doesn’t need to be your SMS app or read your address book.
-- No ads, on any plan.
-- Private backup and a web library.
+- It doesn’t need to be your SMS app or read your address book. It records calls and that’s the whole job.
+- CallApp’s Play listing says it contains ads. Nothing in CallVault is ad-supported.
+- Its listing doesn’t mention backing recordings up. CallVault keeps a private copy, if you want one, that plays in a browser.
 
 ## How do you move?
 

@@ -20,7 +20,7 @@ Stay on Boldbeast Call Recorder if one of these is you:
 Move if these matter more:
 
 - Android 12 and newer: Boldbeast states support up to Android 11.
-- A web library for your backed-up recordings.
+- Its page lists cloud copies but no way to play them in a browser. CallVault’s web library does that.
 
 ## How do you move?
 

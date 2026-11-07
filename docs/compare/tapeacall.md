@@ -20,7 +20,7 @@ Stay on TapeACall if one of these is you:
 Move if these matter more:
 
 - Recording costs nothing: TapeACall requires a subscription after a 7-day trial, and CallVault’s plans only change backup space.
-- A web library for your backed-up recordings.
+- Backup is built in, so there’s no Dropbox or Drive account to connect, and the copies play in a browser.
 
 ## How do you move?
 

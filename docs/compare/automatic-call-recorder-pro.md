@@ -19,8 +19,7 @@ Stay on Automatic Call Recorder Pro if one of these is you:
 Move if these matter more:
 
 - Updated this year. Its listing last changed in November 2022.
-- Automatic backup to private storage, with a web library.
-- No ads, on any plan.
+- Once you turn it on, backup runs by itself. This app’s listing has you share each recording by hand.
 
 ## How do you move?
 

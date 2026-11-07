@@ -20,8 +20,7 @@ Stay on Truecaller if one of these is you:
 Move if these matter more:
 
 - A recorder and nothing else: it doesn’t need to identify who is calling you, and never reads your address book.
-- No ads, on any plan.
-- A web library for your backed-up recordings.
+- Recording is free here. Truecaller lists it under Premium, and its Play listing says the app contains ads; CallVault has none.
 
 ## How do you move?
 

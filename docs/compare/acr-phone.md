@@ -20,8 +20,7 @@ Stay on ACR Phone if one of these is you:
 Move if these matter more:
 
 - You keep the phone app you already use: ACR Phone must be your default phone app.
-- A web library for your backed-up recordings.
-- No ads, on any plan.
+- Backup needs no server of your own: turn it on, sign in, and the copies open in CallVault’s web library.
 
 ## How do you move?
 

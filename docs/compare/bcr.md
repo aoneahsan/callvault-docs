@@ -21,7 +21,7 @@ Stay on BCR if one of these is you:
 Move if these matter more:
 
 - It runs on a stock phone with no rooting.
-- Optional private backup and a web library.
+- Optional private backup and a web library, which an app with no network access can’t offer.
 - CallVault can import from a BCR-compatible folder, so you can use both.
 
 ## How do you move?
