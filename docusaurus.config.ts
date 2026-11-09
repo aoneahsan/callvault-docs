@@ -163,6 +163,9 @@ function discoveryPlugin(): Plugin {
 }
 
 const config: Config = {
+  headTags: [
+    { tagName: 'meta', attributes: { name: 'yandex-verification', content: 'bfb02722189028cf' } },
+  ],
   title: 'CallVault Docs',
   tagline:
     'CallVault records your own Android calls and keeps them on the phone unless you turn on private cloud backup.',
