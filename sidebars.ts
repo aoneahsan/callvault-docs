@@ -83,6 +83,18 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'White-label & licensing',
+      link: { type: 'doc', id: 'white-label/index' },
+      items: [
+        'white-label/delivered',
+        'white-label/setup',
+        'white-label/updates',
+        'white-label/verify',
+        'white-label/faq',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Reference & FAQ',
       link: {
         type: 'generated-index',

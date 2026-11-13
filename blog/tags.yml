@@ -7,3 +7,8 @@ android:
   label: Android
   permalink: /android
   description: Posts about the Android app.
+
+licensing:
+  label: Licensing
+  permalink: /licensing
+  description: White-label licences and the CallVault source buyout.
