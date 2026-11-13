@@ -4,11 +4,25 @@
         <title>CallVault updates</title>
         <link>https://callvault-docs.aoneahsan.com/updates</link>
         <description>Release notes and announcements for CallVault.</description>
-        <lastBuildDate>Thu, 17 Sep 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 13 Nov 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2026 CallVault.</copyright>
+        <item>
+            <title><![CDATA[CallVault can now run under your name]]></title>
+            <link>https://callvault-docs.aoneahsan.com/updates/callvault-white-label</link>
+            <guid>https://callvault-docs.aoneahsan.com/updates/callvault-white-label</guid>
+            <pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Businesses can license CallVault as their own Android call recorder, or buy the source outright. What a licence covers, and where the price lives.]]></description>
+            <content:encoded><![CDATA[<p>A business can now offer CallVault to its own users under its own name. We build the Android app with that business's name, icon and colours, put the download page on its domain, and keep running backup, the admin dashboard and the updates behind it.</p>
+<!-- -->
+<p>The app is delivered the way CallVault ships today: a signed APK from the buyer's own site, with the same self-update. It records the same way too, through the microphone path an ordinary Android app may use, so the buyer's users should test one real call before relying on it.</p>
+<p>A licence leaves the source code with us. A buyout hands over the repository and ends our sale of CallVault to anyone else; licences sold before it keep their terms. Six months of updates come with either, and renewals extend them.</p>
+<p>The price is on the <a href="https://callvault.aoneahsan.com/white-label/pricing" target="_blank" rel="noopener noreferrer" class="">white-label pricing page</a>, read live from our licensing service. The <a class="" href="https://callvault-docs.aoneahsan.com/white-label">white-label docs</a> cover what is delivered, setup and licence checks.</p>]]></content:encoded>
+            <category>Licensing</category>
+            <category>Android</category>
+        </item>
         <item>
             <title><![CDATA[CallVault 1.3.0]]></title>
             <link>https://callvault-docs.aoneahsan.com/updates/callvault-1-3-0</link>

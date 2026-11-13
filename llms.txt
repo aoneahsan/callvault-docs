@@ -52,6 +52,12 @@ These pages describe how it's built.
 - Security and privacy: https://callvault-docs.aoneahsan.com/architecture/security-privacy
 - Web and native split: https://callvault-docs.aoneahsan.com/architecture/web-native-split
 
+## White-label & licensing
+
+- [White-label and licensing](https://callvault-docs.aoneahsan.com/white-label): what a licence covers and how it differs from a source buyout.
+- [What is delivered](https://callvault-docs.aoneahsan.com/white-label/delivered), [Setup](https://callvault-docs.aoneahsan.com/white-label/setup), [Updates and renewals](https://callvault-docs.aoneahsan.com/white-label/updates), [Check a licence](https://callvault-docs.aoneahsan.com/white-label/verify), [FAQ](https://callvault-docs.aoneahsan.com/white-label/faq).
+- Prices are not repeated here; the [pricing page](https://callvault.aoneahsan.com/white-label/pricing) reads them live from our licensing service.
+
 ## Reference
 
 - Troubleshooting: https://callvault-docs.aoneahsan.com/reference/troubleshooting
