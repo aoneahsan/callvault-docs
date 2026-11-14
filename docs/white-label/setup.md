@@ -8,7 +8,7 @@ keywords: [white label app setup, rebrand android app domain]
 
 # Setting up a white-label CallVault
 
-1. **Send the request.** Use the form on the [pricing page](https://callvault.aoneahsan.com/white-label/pricing). Card payment isn't open for CallVault yet, so we reply by email with the quote and these steps.
+1. **Send the request.** Use the form on the [pricing page](https://callvault.aoneahsan.com/white-label/pricing). Online payment isn't open for CallVault yet, so we reply by email with the quote and these steps. You pay by Wise bank transfer, and the licence is issued once we confirm it.
 2. **Send your branding.** Your app name, an icon as an SVG or a large PNG, your colours, and the domain your users will download from.
 3. **Point your domain.** We send the DNS record to add. The download page, the web library and the licence file are served from that domain.
 4. **We build and sign your APK.** It carries your name and package name and its own licence key. We publish it with its `SHA256SUMS` file on your download page.

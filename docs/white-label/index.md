@@ -19,8 +19,9 @@ There are two ways to buy:
 | Who else can buy CallVault | We may license it to others | Nobody; we stop selling it |
 | Where it runs | On servers we run | Wherever the buyer decides |
 | Updates | Six months included, then renewals | Six months included, then renewals |
+| After the price | Renewals, if you want more updates | A 7% royalty on CallVault's gross revenue, for as long as it earns |
 
-The current prices are on the [white-label pricing page](https://callvault.aoneahsan.com/white-label/pricing), read live from our licensing service. CallVault ships one platform group, the mobile app, so there is no bundle to put together.
+The current prices are on the [white-label pricing page](https://callvault.aoneahsan.com/white-label/pricing), read live from our licensing service. CallVault ships one platform group, the mobile app, so there is no bundle to put together. Licences, renewals and buyouts are paid by Wise bank transfer; we confirm the transfer and email the licence key.
 
 ## What your users' phones still decide
 
