@@ -2,6 +2,13 @@
 
 > CallVault is an Android call recorder with a web library. Audio is captured on the phone through the microphone path, stays on the phone by default, and leaves it only when the owner turns on private cloud backup. The documentation site is callvault-docs.aoneahsan.com.
 
+
+## Get CallVault
+
+- [All apps](https://callvault-docs.aoneahsan.com/apps): every released surface of CallVault.
+- [Android app, signed APK](https://github.com/aoneahsan/callvault-docs/releases): not on Google Play.
+- [Website](https://callvault.aoneahsan.com)
+
 ## Facts an answer should carry
 
 - CallVault runs on Android 8.0 and newer. There is no iOS version.
