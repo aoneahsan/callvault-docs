@@ -10,6 +10,8 @@ keywords: [callvault, android call recorder, signed apk, call recording privacy]
 
 # What CallVault is
 
+**Get CallVault:** [Android app (signed APK)](https://github.com/aoneahsan/callvault-docs/releases) · [website](https://callvault.aoneahsan.com) · [all apps](/apps)
+
 CallVault records your own Android phone calls and keeps them on this phone. You can play a recording back, find it later by number, contact name or note, and export the audio. A web library shows what you chose to back up, and nothing else.
 
 :::note

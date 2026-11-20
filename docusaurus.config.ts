@@ -4,12 +4,13 @@ import { execFileSync } from 'node:child_process';
 import type { Config, Plugin } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
+import { APPS_LASTMOD, OTHER_PLATFORMS, platformHref } from './src/data/platforms';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const structuredData = require('./src/plugins/structured-data.js');
 
 const SITE_URL = 'https://callvault-docs.aoneahsan.com';
-const APP_URL = 'https://callvault.aoneahsan.com';
+const APP_URL = platformHref('web');
 const REPO_URL = 'https://github.com/aoneahsan/callvault-docs';
 
 /** A source's last committed edit, not the build day or a post's publication day. */
@@ -281,6 +282,8 @@ const config: Config = {
               const route = routeOf(item.url);
               const blogDay = blogDays.get(route);
               if (blogDay) return { ...item, lastmod: blogDay };
+              // `/apps` lists the released surfaces; it changes when their proof date does.
+              if (route === '/apps') return { ...item, lastmod: APPS_LASTMOD };
               if (route === '/updates') {
                 if (!newestPostDay) throw new Error('Blog index has no dated posts');
                 return { ...item, lastmod: newestPostDay };
@@ -344,9 +347,13 @@ const config: Config = {
         { to: '/changelog', label: 'Changelog', position: 'left' },
         { to: '/updates', label: 'Updates', position: 'left' },
         {
-          href: APP_URL,
-          label: 'Open the app',
+          type: 'dropdown',
+          label: 'Get CallVault',
           position: 'right',
+          items: [
+            ...OTHER_PLATFORMS.map((platform) => ({ label: platform.name, href: platform.href })),
+            { label: 'All apps', to: '/apps' },
+          ],
         },
         {
           href: REPO_URL,
@@ -359,6 +366,13 @@ const config: Config = {
       style: 'dark',
       links: [
         {
+          title: 'Get CallVault',
+          items: [
+            ...OTHER_PLATFORMS.map((platform) => ({ label: platform.name, href: platform.href })),
+            { label: 'All apps', to: '/apps' },
+          ],
+        },
+        {
           title: 'Docs',
           items: [
             { label: 'Getting started', to: '/' },
@@ -370,7 +384,6 @@ const config: Config = {
         {
           title: 'CallVault',
           items: [
-            { label: 'Open the app', href: APP_URL },
             { label: 'Privacy policy', href: `${APP_URL}/privacy-policy` },
             { label: 'Terms', href: `${APP_URL}/terms` },
             { label: 'Data deletion', href: `${APP_URL}/data-deletion` },
