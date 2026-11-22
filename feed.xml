@@ -4,11 +4,25 @@
         <title>CallVault updates</title>
         <link>https://callvault-docs.aoneahsan.com/updates</link>
         <description>Release notes and announcements for CallVault.</description>
-        <lastBuildDate>Fri, 13 Nov 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 22 Nov 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2026 CallVault.</copyright>
+        <item>
+            <title><![CDATA[CallVault now opens to your own scripts and assistants, read only]]></title>
+            <link>https://callvault-docs.aoneahsan.com/updates/callvault-other-apps</link>
+            <guid>https://callvault-docs.aoneahsan.com/updates/callvault-other-apps</guid>
+            <pubDate>Sun, 22 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Access keys, an MCP server for Claude, ChatGPT, Claude Code and Cursor, signed webhooks and two-step sign-in. Outside apps read your recordings' details and never change or delete anything.]]></description>
+            <content:encoded><![CDATA[<p>You can now point your own tools at your CallVault account. A backup script can read your recordings with an access key, Claude or ChatGPT can answer "How many calls did I record last week?", and your server can hear the moment a recording's audio finishes uploading.</p>
+<!-- -->
+<p>All of it is read only. Nothing outside CallVault can change or delete a recording, a note or a setting. Contact names and phone numbers never leave: a recording reaches an outside app titled by its direction and time, like "Incoming call, 20 Nov, 16:42".</p>
+<p>Audio is the one thing we were careful about, because a call holds the other person's voice. An app or assistant gets audio only if you tick <strong>Audio downloads</strong> for it, and then only as a link to one of your own backed-up recordings that stops working after 10 minutes.</p>
+<p>Two-step sign-in came with it, on the phone and in the web library. With it on, nobody holding your Google account alone can make a key.</p>
+<p>Everything is under <strong>Other apps</strong> and <strong>Security</strong>, in the Android app and now in the web library too. The <a class="" href="https://callvault-docs.aoneahsan.com/developers">developer docs</a> cover the API, the assistant setup for each client, webhook signature checks in Node and Python, and two-step sign-in.</p>]]></content:encoded>
+            <category>Release</category>
+        </item>
         <item>
             <title><![CDATA[CallVault can now run under your name]]></title>
             <link>https://callvault-docs.aoneahsan.com/updates/callvault-white-label</link>

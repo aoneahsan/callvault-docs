@@ -71,6 +71,18 @@ These pages describe how it's built.
 - FAQ: https://callvault-docs.aoneahsan.com/reference/faq
 - Changelog: https://callvault-docs.aoneahsan.com/changelog
 
+## Developers
+
+Outside apps read a CallVault account and never change or delete anything. Contact names and phone numbers are never returned; a recording's outside title is its direction and start time, like "Incoming call, 20 Nov, 16:42". Audio is reachable only as a 10-minute download link to the person's own backed-up recording, and only when they allowed audio. Two-step sign-in is optional for users and required for administrators.
+
+- [CallVault for developers](https://callvault-docs.aoneahsan.com/developers): what keys, assistants and webhooks can read, the addresses, and each plan's limits.
+- [Access keys](https://callvault-docs.aoneahsan.com/developers/authentication): read-only `cv_pat_` keys, shown again only within 10 minutes of signing in.
+- [The API](https://callvault-docs.aoneahsan.com/developers/api): REST routes with curl examples. OpenAPI 3.1: https://bnlxrjjwawyampjbfqnu.supabase.co/functions/v1/api/v1/openapi.json
+- [Assistants (MCP)](https://callvault-docs.aoneahsan.com/developers/assistants): Claude, ChatGPT, Claude Code and Cursor at https://bnlxrjjwawyampjbfqnu.supabase.co/functions/v1/mcp, six read-only tools.
+- [Webhooks](https://callvault-docs.aoneahsan.com/developers/webhooks): recording.created and recording.upload_finished, Standard Webhooks signatures, Node and Python checks.
+- [Two-step sign-in](https://callvault-docs.aoneahsan.com/developers/two-step-sign-in): authenticator codes, ten recovery codes, a seven-day remembered phone or browser.
+- [Developer changelog](https://callvault-docs.aoneahsan.com/developers/changelog)
+
 ## Contact
 
 Ahsan Mahmood · aoneahsan@gmail.com · https://aoneahsan.com
