@@ -378,6 +378,7 @@ const config: Config = {
             { label: 'Getting started', to: '/' },
             { label: 'User guide', to: '/user-guide/recording' },
             { label: 'Architecture', to: '/architecture/pipeline' },
+            { label: 'Developers', to: '/developers' },
             { label: 'FAQ', to: '/reference/faq' },
           ],
         },

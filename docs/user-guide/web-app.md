@@ -23,6 +23,7 @@ Play what you backed up from any browser. The web library shows only backed-up r
 - Open **Profile** for the **Private cloud backup** switch, your [preferences](/user-guide/profile) and the current plan with its end date.
 - Delete a recording everywhere from its detail view.
 - [Delete your account](/user-guide/account-deletion) and its cloud files.
+- Open **Security** for [two-step sign-in](/developers/two-step-sign-in), and **Other apps** for [access keys, assistants and webhooks](/developers). On a wide screen both sit in the side rail; on a narrow one they are rows on the Profile tab.
 
 ## Before anything appears here
 

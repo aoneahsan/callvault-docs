@@ -30,6 +30,8 @@ CallVault does not pin certificates. Trusting the system store and refusing user
 
 Every recording and every call detail belongs to the account that made it. Administrator reach is a separate grant on top of that, checked against the server each time the dashboard is opened rather than remembered from a previous visit. [Roles & access](/admin-guide/roles) covers how that grant is given and taken away, and every privileged write lands in an append-only audit log described on [Plans and releases](/admin-guide/plans-and-releases).
 
+[Two-step sign-in](/developers/two-step-sign-in) adds an authenticator code after Google, and is required for administrators. Apps and assistants you connect under **Other apps** read only, never contact names or phone numbers, and reach audio only through a 10-minute link you allowed; [CallVault for developers](/developers) lists exactly what each can read.
+
 ## Honest limits
 
 - **There is no end-to-end encryption.** If that is your requirement, this is the wrong tool for you, and you should read that as the hard limit it is.
