@@ -1,7 +1,8 @@
 import fs from 'node:fs/promises';
+import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
-import type { Config, Plugin } from '@docusaurus/types';
+import type { Config, LoadContext, Plugin } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
 import { APPS_LASTMOD, OTHER_PLATFORMS, platformHref } from './src/data/platforms';
@@ -98,7 +99,21 @@ async function waitForBlogRss(file: string, timeoutMs = 60_000): Promise<void> {
  * Feeds the human `/sitemap` and `/feed` pages from the docs and blog plugins' own data, so neither
  * page keeps a list that can drift, and publishes the updates RSS at the root `/feed.xml`.
  */
-function discoveryPlugin(): Plugin {
+/**
+ * Docusaurus ships this config and every route module path to the browser, so a require.resolve() plugin or any
+ * other absolute path would publish this machine's folders in main.js. Fails the build when one appears.
+ */
+function assertNoLocalPaths(outDir: string, siteDir: string): void {
+  const jsDir = path.join(outDir, 'assets', 'js');
+  const forms = [siteDir.split(path.sep).join('/'), siteDir.split(path.sep).join('\\\\')];
+  for (const file of readdirSync(jsDir).filter((name) => name.endsWith('.js'))) {
+    const text = readFileSync(path.join(jsDir, file), 'utf8');
+    const found = forms.find((form) => text.includes(form));
+    if (found) throw new Error(`${file} carries the local path ${found}: name plugins by package, never require.resolve()`);
+  }
+}
+
+function discoveryPlugin({ siteDir }: LoadContext): Plugin {
   return {
     name: 'callvault-discovery',
     async allContentLoaded({ allContent, actions }) {
@@ -151,6 +166,7 @@ function discoveryPlugin(): Plugin {
       actions.setGlobalData({ docGroups, updates });
     },
     async postBuild({ outDir }) {
+      assertNoLocalPaths(outDir, siteDir);
       // Root `/feed.xml` is the updates RSS. Its XSL and CSS travel with it so the relative
       // `rss.xsl` / `rss.css` references still resolve from the site root.
       const source = path.join(outDir, 'updates');
@@ -201,8 +217,9 @@ const config: Config = {
   themes: [
     '@docusaurus/theme-mermaid',
     [
-      // Public product-docs pattern: bundled local search (no external service).
-      require.resolve('@easyops-cn/docusaurus-search-local'),
+      // Public product-docs pattern: bundled local search (no external service). Named by package, never
+      // require.resolve(): the config ships to the browser, and a resolved path would publish this machine's folders.
+      '@easyops-cn/docusaurus-search-local',
       {
         hashed: true,
         indexBlog: true,
