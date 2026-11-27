@@ -7,7 +7,9 @@ Fixed path in every repo (`aoneahsan-cccs-search-issue-remediation`). Newest fir
 
 Status: boxes 4, 5, 7, 8 and 9 plus the slash switch fixed; 1, 2 and 6 Pending; 3 answered by owner law. `yarn build`
 (zero warnings) ends with `yarn seo:contract` (`src/plugins/seo-contract.mts`), which failed on a planted noindex on
-the home page, then passed. Rendered `/white-label/faq/` at 1440. Live proof is added after publishing.
+the home page, then passed. Rendered `/white-label/faq/` at 1440. Live-verified, google-pending (commit `c927ed5`, gh-pages
+`1d4fdc3`, IndexNow 200): `/white-label/faq` → 301 → 200 with FAQPage; Person, Organization and WebSite on every page;
+`/updates/archive/` carries no noindex; old tag, author and `/docs/developers` URLs land; 0 unslashed sitemap URLs.
 
 | Box | SA | What was wrong (evidence) | Root fix (file) | Contract | Live proof |
 |---|---|---|---|---|---|
