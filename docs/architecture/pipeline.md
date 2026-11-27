@@ -2,7 +2,7 @@
 title: "The sync pipeline"
 description: "A recording is usable the moment the call ends. Each track backs up on its own, retries on an increasing delay, and CallVault never removes a phone copy before that recording is synced and its checksum verified."
 sidebar_position: 1
-tags: [architecture, pipeline, state-machine, sync]
+topics: [architecture, pipeline, state-machine, sync]
 keywords: [sync pipeline, state machine, retry backoff, offline first pipeline]
 ---
 

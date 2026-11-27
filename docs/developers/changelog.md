@@ -3,7 +3,7 @@ title: "Developer changelog"
 description: "Changes to CallVault's API, MCP server, webhooks and two-step sign-in, newest first, with the date each reached the live service."
 sidebar_label: Changelog
 sidebar_position: 7
-tags: [developers, changelog]
+topics: [developers, changelog]
 keywords: [callvault api changelog, callvault mcp changes, callvault webhooks changes]
 ---
 

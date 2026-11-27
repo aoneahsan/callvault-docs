@@ -2,7 +2,7 @@
 title: Call-recording law (not legal advice)
 description: Recording your own calls is jurisdiction-dependent. CallVault is transparent but does not announce — the responsibility to inform others is yours.
 sidebar_position: 3
-tags: [legal, privacy, consent, disclaimer]
+topics: [legal, privacy, consent, disclaimer]
 keywords: [call recording law, one-party consent, pakistan call recording, is call recording legal]
 ---
 

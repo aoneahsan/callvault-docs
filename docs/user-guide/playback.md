@@ -2,7 +2,7 @@
 title: Playback & speed
 description: Play back a recording, change playback speed, and export or share a call from the detail screen.
 sidebar_position: 2
-tags: [playback, audio, speed, export, share]
+topics: [playback, audio, speed, export, share]
 keywords: [play call recording, playback speed, export recording, share call audio]
 ---
 

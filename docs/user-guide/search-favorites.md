@@ -2,7 +2,7 @@
 title: Search & favorites
 description: Find a call by number, contact, or note; mark favorites; and add notes that sync across your devices.
 sidebar_position: 3
-tags: [search, favorites, notes, organization]
+topics: [search, favorites, notes, organization]
 keywords: [search call recordings, favorite calls, add note to recording]
 ---
 

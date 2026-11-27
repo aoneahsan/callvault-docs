@@ -3,7 +3,7 @@ title: "Access keys"
 description: "Make a read-only CallVault access key, choose what it may read and when it stops, send it as a Bearer token, and show it again within 10 minutes of signing in."
 sidebar_label: Access keys
 sidebar_position: 2
-tags: [developers, api, access-keys, security]
+topics: [developers, api, access-keys, security]
 keywords: [callvault access key, callvault api key, cv_pat, personal access token, show key again]
 ---
 

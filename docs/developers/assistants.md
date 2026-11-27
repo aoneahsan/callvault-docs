@@ -3,7 +3,7 @@ title: "Assistants (MCP)"
 description: "Connect Claude, ChatGPT, Claude Code or Cursor to CallVault over MCP, choose what it may read on the consent page, and see the six read-only tools an assistant can use. Audio stays off unless you tick it."
 sidebar_label: Assistants (MCP)
 sidebar_position: 4
-tags: [developers, mcp, claude, chatgpt, oauth]
+topics: [developers, mcp, claude, chatgpt, oauth]
 keywords: [callvault mcp server, claude call recordings, chatgpt connector callvault, claude code mcp, cursor mcp]
 ---
 

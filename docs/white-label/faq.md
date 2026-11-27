@@ -2,7 +2,7 @@
 title: "White-label FAQ"
 description: "Answers for businesses licensing CallVault: source code, Google Play, iPhone, updates, other buyers, the buyout royalty, custom work and payment."
 sidebar_position: 6
-tags: [white-label, licensing, faq]
+topics: [white-label, licensing, faq]
 keywords: [white label call recorder faq, buy call recorder source code]
 ---
 

@@ -2,8 +2,9 @@
 title: CallVault now opens to your own scripts and assistants, read only
 description: Access keys, an MCP server for Claude, ChatGPT, Claude Code and Cursor, signed webhooks and two-step sign-in. Outside apps read your recordings' details and never change or delete anything.
 slug: callvault-other-apps
-authors: [aoneahsan]
-tags: [release]
+authors:
+  - name: "The CallVault team"
+    url: https://callvault.aoneahsan.com
 date: 2026-11-22
 ---
 

@@ -2,7 +2,7 @@
 title: Roles & access
 description: CallVault has two roles — user and admin. Admin reach is granted by database row-level security and enforced live, with privileged actions handled server-side.
 sidebar_position: 2
-tags: [admin, roles, security, rls]
+topics: [admin, roles, security, rls]
 keywords: [callvault roles, admin role, row level security, access control]
 ---
 

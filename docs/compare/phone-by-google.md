@@ -3,7 +3,7 @@ title: "Moving from Phone by Google to CallVault"
 description: "How to move from Phone by Google to CallVault, what changes, and who should stay on Phone by Google. Facts checked 7 November 2026."
 sidebar_label: "Phone by Google"
 sidebar_position: 5
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving from Phone by Google to CallVault

@@ -2,7 +2,7 @@
 title: "Install CallVault"
 description: "Download the signed APK from the CallVault releases page, check its SHA-256, finish Capture setup, then test one real call."
 sidebar_position: 1
-tags: [install, apk, android, updates]
+topics: [install, apk, android, updates]
 keywords: [install apk android, sideload call recorder, verify sha256 apk, update sideloaded app]
 ---
 

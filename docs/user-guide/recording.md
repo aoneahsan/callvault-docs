@@ -2,7 +2,7 @@
 title: "Recording your calls"
 description: "CallVault records through the phone's microphone path, and it can import recordings your phone's own recorder or a BCR-compatible recorder already made. Every track carries the source CallVault actually found."
 sidebar_position: 1
-tags: [recording, capture, microphone, bcr, tracks]
+topics: [recording, capture, microphone, bcr, tracks]
 keywords: [record calls android, both sides call recording, mic recording, bcr folder watch]
 ---
 

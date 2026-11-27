@@ -2,7 +2,7 @@
 title: One codebase, two builds
 description: CallVault builds a native Android recorder and a web dashboard from a single Flutter codebase — kept apart by keeping device-only code out of the web build.
 sidebar_position: 4
-tags: [architecture, flutter, web, build]
+topics: [architecture, flutter, web, build]
 keywords: [flutter web and native, one codebase two builds, dart io web split]
 ---
 

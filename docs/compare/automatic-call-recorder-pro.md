@@ -3,7 +3,7 @@ title: "Moving from Automatic Call Recorder Pro to CallVault"
 description: "How to move from Automatic Call Recorder Pro to CallVault, what changes, and who should stay on Automatic Call Recorder Pro. Facts checked 7 November 2026."
 sidebar_label: "Automatic Call Recorder Pro"
 sidebar_position: 8
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving from Automatic Call Recorder Pro to CallVault

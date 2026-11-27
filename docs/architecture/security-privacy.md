@@ -2,7 +2,7 @@
 title: "Security & privacy"
 description: "Recordings sit in app-private storage no other app can read, uploads go over HTTPS only, and there is no end-to-end encryption. The limits are here beside the promises."
 sidebar_position: 3
-tags: [security, privacy, encryption, app-lock]
+topics: [security, privacy, encryption, app-lock]
 keywords: [callvault security, privacy, app lock, https only]
 ---
 

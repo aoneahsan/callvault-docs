@@ -3,7 +3,7 @@ title: "Moving from ACR Phone to CallVault"
 description: "How to move from ACR Phone to CallVault, what changes, and who should stay on ACR Phone. Facts checked 7 November 2026."
 sidebar_label: "ACR Phone"
 sidebar_position: 3
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving from ACR Phone to CallVault

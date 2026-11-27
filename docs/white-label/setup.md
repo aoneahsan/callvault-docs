@@ -2,7 +2,7 @@
 title: "Setting up a white-label CallVault"
 description: "The steps from a white-label request to your users' first download: details, domain, branding, the signed build and the download page."
 sidebar_position: 3
-tags: [white-label, licensing]
+topics: [white-label, licensing]
 keywords: [white label app setup, rebrand android app domain]
 ---
 

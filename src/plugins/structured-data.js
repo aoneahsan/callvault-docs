@@ -83,7 +83,7 @@ function h2Sections(article) {
   return sections;
 }
 
-function faqPage(html) {
+function faqPage(html, route) {
   const article = articleOf(html);
   if (!article) return null;
   const questions = h2Sections(article)
@@ -95,7 +95,7 @@ function faqPage(html) {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     name: title,
-    url: `${SITE}/reference/faq`,
+    url: `${SITE}/${route}/`,
     mainEntity: questions.map((q) => ({
       '@type': 'Question',
       name: q.name,
@@ -131,12 +131,16 @@ function howTo(html) {
   return data;
 }
 
+// `trailingSlash: true`: every page is `<route>/index.html` (callvault-docs#1, SA-P26).
 const PAGES = [
-  ['reference/faq.html', faqPage],
-  ['getting-started/install.html', howTo],
+  ['reference/faq/index.html', (html) => faqPage(html, 'reference/faq')],
+  ['white-label/faq/index.html', (html) => faqPage(html, 'white-label/faq')],
+  ['getting-started/install/index.html', howTo],
 ];
 
-const NOINDEX_PAGES = ['search.html', 'search', 'tags.html', 'tags', 'updates/archive.html', 'updates/archive', 'updates/authors.html', 'updates/authors', 'updates/tags.html', 'updates/tags', '404.html'];
+// Only utility pages: the search screen and the 404. Public pages are never noindex (owner, 2026-11-27); the tag and
+// author pages that used to be listed here were retired and redirect to real pages instead.
+const NOINDEX_PAGES = ['search', '404.html'];
 
 function htmlFilesUnder(target) {
   if (!fs.existsSync(target)) return [];

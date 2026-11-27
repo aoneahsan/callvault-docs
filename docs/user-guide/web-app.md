@@ -2,7 +2,7 @@
 title: "The web library"
 description: "The web library shows only backed-up recordings. Sign in with Google to play them, read your stats and manage your account."
 sidebar_position: 5
-tags: [web-app, browser, backup]
+topics: [web-app, browser, backup]
 keywords: [callvault web app, browse recordings online, backed up recordings]
 ---
 

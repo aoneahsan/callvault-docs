@@ -3,7 +3,7 @@ title: "Moving from Call Recorder Automatic to CallVault"
 description: "How to move from Call Recorder Automatic to CallVault, what changes, and who should stay on Call Recorder Automatic. Facts checked 7 November 2026."
 sidebar_label: "Call Recorder Automatic"
 sidebar_position: 12
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving from Call Recorder Automatic to CallVault

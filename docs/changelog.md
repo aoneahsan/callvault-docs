@@ -4,7 +4,7 @@ description: Release notes for CallVault, latest first.
 slug: /changelog
 sidebar_position: 99
 sidebar_label: Changelog
-tags: [changelog, releases, updates]
+topics: [changelog, releases, updates]
 keywords: [callvault changelog, release notes, version history]
 ---
 

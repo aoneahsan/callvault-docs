@@ -2,7 +2,7 @@
 title: "Check a CallVault licence"
 description: "How to check that a white-label CallVault is licensed, by licence key or by the domain it runs on, and what each answer means."
 sidebar_position: 5
-tags: [white-label, licensing]
+topics: [white-label, licensing]
 keywords: [verify white label licence, callvault licence check]
 ---
 

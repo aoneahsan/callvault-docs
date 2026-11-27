@@ -2,7 +2,7 @@
 title: "Updates and renewals for a white-label CallVault"
 description: "What counts as an update for a white-label CallVault, the months included with a licence or buyout, renewals, and what happens without one."
 sidebar_position: 4
-tags: [white-label, licensing, updates]
+topics: [white-label, licensing, updates]
 keywords: [white label app updates, licence renewal call recorder]
 ---
 

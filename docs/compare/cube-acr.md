@@ -3,7 +3,7 @@ title: "Moving from Cube ACR to CallVault"
 description: "How to move from Cube ACR to CallVault, what changes, and who should stay on Cube ACR. Facts checked 7 November 2026."
 sidebar_label: "Cube ACR"
 sidebar_position: 2
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving from Cube ACR to CallVault

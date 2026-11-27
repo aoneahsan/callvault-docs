@@ -2,7 +2,7 @@
 title: "What a white-label CallVault includes"
 description: "The parts of a white-label CallVault: the signed Android APK under your name, the download page and self-update, sign-in, backup, the web library and the admin dashboard."
 sidebar_position: 2
-tags: [white-label, licensing]
+topics: [white-label, licensing]
 keywords: [white label android app delivery, signed apk white label]
 ---
 

@@ -3,7 +3,7 @@ title: "White-label and licensing"
 description: "How a business runs CallVault under its own name: what a white-label licence covers, how it differs from a source buyout, and where to see the price."
 sidebar_position: 1
 slug: /white-label
-tags: [white-label, licensing]
+topics: [white-label, licensing]
 keywords: [white label call recorder, call recording app licence, rebrand call recorder android]
 ---
 

@@ -3,7 +3,7 @@ title: "Moving from Talker ACR to CallVault"
 description: "How to move from Talker ACR to CallVault, what changes, and who should stay on Talker ACR. Facts checked 7 November 2026."
 sidebar_label: "Talker ACR"
 sidebar_position: 9
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving from Talker ACR to CallVault

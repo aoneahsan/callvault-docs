@@ -3,7 +3,7 @@ title: "Moving from TapeACall to CallVault"
 description: "How to move from TapeACall to CallVault, what changes, and who should stay on TapeACall. Facts checked 7 November 2026."
 sidebar_label: "TapeACall"
 sidebar_position: 10
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving from TapeACall to CallVault

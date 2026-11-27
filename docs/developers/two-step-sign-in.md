@@ -3,7 +3,7 @@ title: "Two-step sign-in"
 description: "Turn on two-step sign-in for CallVault on the phone or in the web library: a six-digit authenticator code after Google, ten single-use recovery codes, an optional seven-day remembered phone or browser, and what to do when a phone is lost."
 sidebar_label: Two-step sign-in
 sidebar_position: 6
-tags: [developers, security, two-step, mfa, recovery-codes]
+topics: [developers, security, two-step, mfa, recovery-codes]
 keywords: [callvault two-step sign-in, callvault 2fa, authenticator app callvault, recovery codes, lost phone two-step]
 ---
 

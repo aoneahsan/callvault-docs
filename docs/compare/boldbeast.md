@@ -3,7 +3,7 @@ title: "Moving from Boldbeast Call Recorder to CallVault"
 description: "How to move from Boldbeast Call Recorder to CallVault, what changes, and who should stay on Boldbeast Call Recorder. Facts checked 7 November 2026."
 sidebar_label: "Boldbeast Call Recorder"
 sidebar_position: 7
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving from Boldbeast Call Recorder to CallVault

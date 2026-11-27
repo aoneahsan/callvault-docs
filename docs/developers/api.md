@@ -3,7 +3,7 @@ title: "The CallVault API"
 description: "Read your CallVault recordings, notes, audio links, plan and household over REST with an access key: every route with a curl example, the response envelope, errors, pages, rate limits and the OpenAPI document."
 sidebar_label: The API
 sidebar_position: 3
-tags: [developers, api, rest, openapi]
+topics: [developers, api, rest, openapi]
 keywords: [callvault rest api, call recordings api, download call recording api, openapi callvault]
 ---
 

@@ -2,7 +2,7 @@
 title: "Data layer"
 description: "The phone's own database is the source of truth. Turn private cloud backup on and a copy of each recording, plus its call details, is kept as private files on CallVault's servers."
 sidebar_position: 2
-tags: [architecture, data, sqlite, storage, backup]
+topics: [architecture, data, sqlite, storage, backup]
 keywords: [callvault data model, drift sqlite, where are recordings stored, private cloud backup]
 ---
 

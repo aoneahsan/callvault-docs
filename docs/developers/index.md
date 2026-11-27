@@ -4,7 +4,7 @@ description: "What your own script, an assistant such as Claude or ChatGPT, or y
 sidebar_label: Overview
 sidebar_position: 1
 slug: /developers
-tags: [developers, api, mcp, webhooks, two-step]
+topics: [developers, api, mcp, webhooks, two-step]
 keywords: [callvault api, callvault mcp, call recorder api, callvault webhooks, call recording claude]
 ---
 

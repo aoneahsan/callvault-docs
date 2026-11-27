@@ -3,7 +3,7 @@ title: "Moving from CallApp to CallVault"
 description: "How to move from CallApp to CallVault, what changes, and who should stay on CallApp. Facts checked 7 November 2026."
 sidebar_label: "CallApp"
 sidebar_position: 11
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving from CallApp to CallVault

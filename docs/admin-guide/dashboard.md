@@ -2,7 +2,7 @@
 title: "The admin dashboard"
 description: "An Overview of platform totals and recent activity, then six tabs: users, plans, releases, cloud usage, the audit log and roles. Reached at /admin on the web and from Settings in the app."
 sidebar_position: 1
-tags: [admin, dashboard, stats]
+topics: [admin, dashboard, stats]
 keywords: [callvault admin, admin dashboard, platform totals, user activity]
 ---
 

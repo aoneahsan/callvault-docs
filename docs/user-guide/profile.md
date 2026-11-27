@@ -2,7 +2,7 @@
 title: "Profile & preferences"
 description: "Profile carries your account, your plan and its end date, the Private cloud backup switch, appearance and language, and the way to delete everything."
 sidebar_position: 6
-tags: [profile, preferences, theme, language, i18n]
+topics: [profile, preferences, theme, language, i18n]
 keywords: [callvault profile, dark mode, urdu, rtl, appearance settings]
 ---
 

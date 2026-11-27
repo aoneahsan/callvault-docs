@@ -3,7 +3,7 @@ title: "Moving from Truecaller to CallVault"
 description: "How to move from Truecaller to CallVault, what changes, and who should stay on Truecaller. Facts checked 7 November 2026."
 sidebar_label: "Truecaller"
 sidebar_position: 6
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving from Truecaller to CallVault

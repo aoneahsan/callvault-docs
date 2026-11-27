@@ -2,7 +2,7 @@
 title: "Plans and Family"
 description: "Compare CallVault Free, Pro and Family cloud backup limits and Family's per-seat price, then request a paid plan on the CallVault website."
 sidebar_position: 8
-tags: [plans, pricing, family, backup]
+topics: [plans, pricing, family, backup]
 keywords: [call recorder cloud storage plans, family plan call recorder, callvault pricing]
 ---
 

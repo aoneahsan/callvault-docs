@@ -4,7 +4,7 @@ description: "Step-by-step moves to CallVault from 11 other Android call recorde
 sidebar_label: "Overview"
 sidebar_position: 1
 slug: /compare
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving to CallVault from another recorder

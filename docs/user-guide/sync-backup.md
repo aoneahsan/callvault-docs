@@ -2,7 +2,7 @@
 title: "Private cloud backup"
 description: "Private cloud backup is off until you turn it on. What is stored, who can reach it, the limits your plan sets, and what happens when you hit one."
 sidebar_position: 4
-tags: [backup, cloud, privacy, plans]
+topics: [backup, cloud, privacy, plans]
 keywords: [call recorder cloud backup, where are recordings stored, wifi only backup]
 ---
 

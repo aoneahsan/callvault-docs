@@ -2,7 +2,7 @@
 title: "FAQ"
 description: "Straight answers about CallVault: why it isn't on Google Play, what it can hear, what leaves your device, cloud storage, and the Family plan."
 sidebar_position: 2
-tags: [faq, questions, help]
+topics: [faq, questions, help]
 keywords: [callvault faq, is call recording legal, both sides recording, call recorder cloud storage]
 ---
 

@@ -6,6 +6,7 @@ import type { Config, LoadContext, Plugin } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
 import { APPS_LASTMOD, OTHER_PLATFORMS, platformHref } from './src/data/platforms';
+import { seoRedirects } from './src/plugins/seo-redirects.mts';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const structuredData = require('./src/plugins/structured-data.js');
@@ -51,7 +52,11 @@ type DiscoveryGroup = { label: string; permalink?: string; entries: DiscoveryEnt
 type DiscoveryUpdate = DiscoveryEntry & { date: string };
 
 /** The fields read from the docs and blog plugins' loaded content. */
-type LoadedDoc = Omit<DiscoveryEntry, 'tags'> & { id: string; unlisted?: boolean; tags: { label: string }[] };
+type LoadedDoc = Omit<DiscoveryEntry, 'tags'> & { id: string; unlisted?: boolean; frontMatter: { topics?: unknown } };
+
+/** A doc's topic labels from its `topics:` front matter (the tag pages were retired, callvault-docs#1). */
+const topicsOf = (frontMatter: { topics?: unknown }): string[] =>
+  Array.isArray(frontMatter.topics) ? frontMatter.topics.map(String) : [];
 type SidebarItem = {
   type: string;
   id?: string;
@@ -126,7 +131,8 @@ function discoveryPlugin({ siteDir }: LoadContext): Plugin {
         title: doc.title,
         description: doc.description,
         permalink: doc.permalink,
-        tags: doc.tags.map((t) => t.label),
+        // Topics are front matter, not tag routes (the /tags/* pages were retired, SA-P32).
+        tags: topicsOf(doc.frontMatter),
       });
       const placed = new Set<string>();
       const take = (items: SidebarItem[] = []): DiscoveryEntry[] =>
@@ -158,7 +164,7 @@ function discoveryPlugin({ siteDir }: LoadContext): Plugin {
           title: metadata.title,
           description: metadata.description,
           permalink: metadata.permalink,
-          tags: metadata.tags.map((t) => t.label),
+          tags: [],
           date: new Date(metadata.date).toISOString(),
         }))
         .sort((a, b) => b.date.localeCompare(a.date));
@@ -181,6 +187,8 @@ function discoveryPlugin({ siteDir }: LoadContext): Plugin {
 
 const config: Config = {
   headTags: [
+    // Publisher entity on every page (callvault-docs#1 AEO 7-8): the owner and Zaions, with the profiles aoneahsan.com lists.
+    { tagName: 'script', attributes: { type: 'application/ld+json' }, innerHTML: JSON.stringify({"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://aoneahsan.com/#person", "name": "Ahsan Mahmood", "alternateName": ["Ahsan", "aoneahsan", "a1ahsan", "A1 Ahsan", "AOne Ahsan"], "url": "https://aoneahsan.com", "jobTitle": "Founder and developer, Zaions", "worksFor": {"@id": "https://zaions.com/#organization"}, "sameAs": ["https://aoneahsan.com", "https://zaions.com", "https://github.com/aoneahsan", "https://www.linkedin.com/in/aoneahsan/", "https://www.npmjs.com/~aoneahsan", "https://www.upwork.com/freelancers/aoneahsan", "https://orcid.org/0009-0006-2311-8687"]}, {"@type": "Organization", "@id": "https://zaions.com/#organization", "name": "Zaions", "alternateName": ["Zaions products", "Zaions projects"], "url": "https://zaions.com", "logo": "https://zaions.com/assets/logos/zaions-mark.png", "founder": {"@id": "https://aoneahsan.com/#person"}, "sameAs": ["https://zaions.com", "https://github.com/aoneahsan"]}, {"@type": "WebSite", "@id": "https://callvault-docs.aoneahsan.com/#website", "name": "CallVault Docs", "url": "https://callvault-docs.aoneahsan.com/", "publisher": {"@id": "https://zaions.com/#organization"}, "author": {"@id": "https://aoneahsan.com/#person"}, "about": {"@type": "SoftwareApplication", "name": "CallVault", "url": "https://callvault.aoneahsan.com", "sameAs": ["https://github.com/aoneahsan/callvault"]}}]}) },
     { tagName: 'meta', attributes: { name: 'yandex-verification', content: 'bfb02722189028cf' } },
   ],
   title: 'CallVault Docs',
@@ -190,7 +198,9 @@ const config: Config = {
 
   url: SITE_URL,
   baseUrl: '/',
-  trailingSlash: false,
+  // Every page is `<route>/index.html`: GitHub Pages then 301s `/x` to `/x/`. With `false` it served `x.html` and
+  // 404ed every slashed link (callvault-docs#1, SA-P26).
+  trailingSlash: true,
 
   organizationName: 'aoneahsan',
   projectName: 'callvault-docs',
@@ -212,7 +222,12 @@ const config: Config = {
   },
 
   // JSON-LD read back out of the rendered pages; plugin data for /sitemap and /feed, plus /feed.xml.
-  plugins: [structuredData, discoveryPlugin],
+  plugins: [
+    structuredData,
+    discoveryPlugin,
+    // The retired tag and author pages lead to real pages; src/plugins/seo-contract.mts re-checks every one after the build.
+    ['@docusaurus/plugin-client-redirects', { redirects: seoRedirects(__dirname) }],
+  ],
 
   themes: [
     '@docusaurus/theme-mermaid',
@@ -258,6 +273,8 @@ const config: Config = {
             '**/*.test.{js,jsx,ts,tsx}',
             '**/__tests__/**',
             'PACKAGES.md',
+            // docs/search-consoles/ is the fleet's fixed-path record of search-console work, never a page.
+            'search-consoles/**',
           ],
           editUrl: `${REPO_URL}/tree/main/`,
           showLastUpdateTime: true,
@@ -276,8 +293,9 @@ const config: Config = {
             copyright: `Copyright © ${new Date().getFullYear()} CallVault.`,
             xslt: true,
           },
+          // One author, the CallVault team, written inline in each post; no tag or author pages (SA-P32).
           onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
+          onInlineAuthors: 'ignore',
           onUntruncatedBlogPosts: 'ignore',
         },
         sitemap: {
@@ -285,16 +303,18 @@ const config: Config = {
           changefreq: null,
           priority: null,
           ignorePatterns: [
-            '/search', '/tags', '/tags/**',
-            '/updates/archive', '/updates/authors',
-            '/updates/tags', '/updates/tags/**',
+            // Slashed forms too: under `trailingSlash: true` routes end in `/`.
+            '/search', '/search/', '/tags', '/tags/', '/tags/**',
+            '/updates/archive', '/updates/archive/', '/updates/authors', '/updates/authors/',
+            '/updates/tags', '/updates/tags/', '/updates/tags/**',
           ],
           filename: 'sitemap.xml',
           createSitemapItems: async ({ defaultCreateSitemapItems, ...params }) => {
             const items = await defaultCreateSitemapItems(params);
             const blogDays = await blogSourceDays();
             const newestPostDay = newestDay(blogDays.values());
-            const routeOf = (url: string): string => new URL(url).pathname;
+            // Slashless, whatever `trailingSlash` puts on the URL, so every date lookup compares one form.
+            const routeOf = (url: string): string => new URL(url).pathname.replace(/(.)\/+$/, '$1');
             const withDates = items.map((item) => {
               const route = routeOf(item.url);
               const blogDay = blogDays.get(route);

@@ -2,7 +2,7 @@
 title: "Deleting recordings & your account"
 description: "Delete a recording locally or request cloud removal, and learn how to resume account deletion if it needs another pass."
 sidebar_position: 7
-tags: [delete, account-deletion, privacy, data]
+topics: [delete, account-deletion, privacy, data]
 keywords: [delete call recording, delete account, remove data, self-service deletion]
 ---
 

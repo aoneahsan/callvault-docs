@@ -4,7 +4,7 @@ description: "CallVault records your own Android calls and keeps them on the pho
 slug: /
 sidebar_position: 1
 sidebar_label: Introduction
-tags: [overview, android, call-recording, local-first]
+topics: [overview, android, call-recording, local-first]
 keywords: [callvault, android call recorder, signed apk, call recording privacy]
 ---
 

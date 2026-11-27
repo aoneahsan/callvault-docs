@@ -2,7 +2,7 @@
 title: "Permissions & onboarding"
 description: "What Capture setup asks for, what each row on it means, and what \"Capture is ready\" actually confirms."
 sidebar_position: 2
-tags: [permissions, onboarding, privacy, android]
+topics: [permissions, onboarding, privacy, android]
 keywords: [callvault permissions, record audio permission, battery optimization, onboarding]
 ---
 

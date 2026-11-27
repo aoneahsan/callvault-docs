@@ -2,7 +2,7 @@
 title: "Plans and releases"
 description: "For administrators: publishing a release, the policy every phone follows, plan limits and grants, cloud usage, and the audit log."
 sidebar_position: 4
-tags: [admin, releases, plans, audit]
+topics: [admin, releases, plans, audit]
 keywords: [callvault admin releases, plan limits, grant provenance, audit log]
 ---
 

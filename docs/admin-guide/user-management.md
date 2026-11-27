@@ -2,7 +2,7 @@
 title: User management
 description: From a user's detail screen an admin can change their role, disable or re-enable the account, or delete the user and all their data.
 sidebar_position: 3
-tags: [admin, users, moderation]
+topics: [admin, users, moderation]
 keywords: [manage users callvault, disable account, delete user, change role]
 ---
 

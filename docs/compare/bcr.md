@@ -3,7 +3,7 @@ title: "Moving from BCR to CallVault"
 description: "How to move from BCR to CallVault, what changes, and who should stay on BCR. Facts checked 7 November 2026."
 sidebar_label: "BCR"
 sidebar_position: 4
-tags: [compare, moving]
+topics: [compare, moving]
 ---
 
 # Moving from BCR to CallVault

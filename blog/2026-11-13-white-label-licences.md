@@ -2,8 +2,9 @@
 title: CallVault can now run under your name
 description: Businesses can license CallVault as their own Android call recorder, or buy the source outright. What a licence covers, and where the price lives.
 slug: callvault-white-label
-authors: [aoneahsan]
-tags: [licensing, android]
+authors:
+  - name: "The CallVault team"
+    url: https://callvault.aoneahsan.com
 date: 2026-11-13
 ---
 

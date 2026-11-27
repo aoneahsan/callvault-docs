@@ -3,7 +3,7 @@ title: "Webhooks"
 description: "CallVault sends your server a signed POST when a recording is added or its audio finishes uploading. Every event with a sample payload, signature checks in Node and Python, a message to test against, and the retry schedule."
 sidebar_label: Webhooks
 sidebar_position: 5
-tags: [developers, webhooks, standard-webhooks, signing]
+topics: [developers, webhooks, standard-webhooks, signing]
 keywords: [callvault webhooks, verify webhook signature, standard webhooks node, standard webhooks python, recording uploaded webhook]
 ---
 

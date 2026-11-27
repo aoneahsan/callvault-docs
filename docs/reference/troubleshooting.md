@@ -2,7 +2,7 @@
 title: "Troubleshooting"
 description: "Fixes for missed recordings, a faint other party, backups that aren't happening, oversized files, sign-in, and an empty web library."
 sidebar_position: 1
-tags: [troubleshooting, support, help]
+topics: [troubleshooting, support, help]
 keywords: [callvault not recording, other party silent, backup not working, sign in issue]
 ---
 
