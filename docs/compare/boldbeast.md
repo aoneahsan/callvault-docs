@@ -1,6 +1,6 @@
 ---
 title: "Moving from Boldbeast Call Recorder to CallVault"
-description: "How to move from Boldbeast Call Recorder to CallVault, what changes, and who should stay on Boldbeast Call Recorder. Facts checked 7 November 2026."
+description: "How to move from Boldbeast Call Recorder to CallVault, what changes, and who should stay on Boldbeast Call Recorder. Facts checked 27 November 2026."
 sidebar_label: "Boldbeast Call Recorder"
 sidebar_position: 7
 topics: [compare, moving]
@@ -8,7 +8,7 @@ topics: [compare, moving]
 
 # Moving from Boldbeast Call Recorder to CallVault
 
-A long-running Android recorder, offered as an APK from its own site, with options for phones that need root. Facts about it come from <a href="https://www.boldbeast.com/android/call_recorder.html" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 7 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/boldbeast).
+A long-running Android recorder, offered as an APK from its own site, with options for phones that need root. Facts about it come from <a href="https://www.boldbeast.com/android/call_recorder.html" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 27 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/boldbeast).
 
 ## Should you move?
 

@@ -1,6 +1,6 @@
 ---
 title: "Moving from Call Recorder Automatic to CallVault"
-description: "How to move from Call Recorder Automatic to CallVault, what changes, and who should stay on Call Recorder Automatic. Facts checked 7 November 2026."
+description: "How to move from Call Recorder Automatic to CallVault, what changes, and who should stay on Call Recorder Automatic. Facts checked 27 November 2026."
 sidebar_label: "Call Recorder Automatic"
 sidebar_position: 12
 topics: [compare, moving]
@@ -8,7 +8,7 @@ topics: [compare, moving]
 
 # Moving from Call Recorder Automatic to CallVault
 
-A call recorder from Tap AI with caller ID and an ignore list. Facts about it come from <a href="https://play.google.com/store/apps/details?id=il.co.smedia.callrecorder.yoni&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 7 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/call-recorder-automatic).
+A call recorder from Tap AI with caller ID and an ignore list. Facts about it come from <a href="https://play.google.com/store/apps/details?id=il.co.smedia.callrecorder.yoni&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 27 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/call-recorder-automatic).
 
 ## Should you move?
 

@@ -1,6 +1,6 @@
 ---
 title: "Moving from TapeACall to CallVault"
-description: "How to move from TapeACall to CallVault, what changes, and who should stay on TapeACall. Facts checked 7 November 2026."
+description: "How to move from TapeACall to CallVault, what changes, and who should stay on TapeACall. Facts checked 27 November 2026."
 sidebar_label: "TapeACall"
 sidebar_position: 10
 topics: [compare, moving]
@@ -8,7 +8,7 @@ topics: [compare, moving]
 
 # Moving from TapeACall to CallVault
 
-A subscription call recorder with transcripts, from Mosaic Srl. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.tapeacall.com&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 7 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/tapeacall).
+A subscription call recorder with transcripts, from Mosaic Srl. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.tapeacall.com&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 27 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/tapeacall).
 
 ## Should you move?
 

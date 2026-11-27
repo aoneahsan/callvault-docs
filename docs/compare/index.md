@@ -9,7 +9,7 @@ topics: [compare, moving]
 
 # Moving to CallVault from another recorder
 
-Each page says who should stay where they are, then how to move. Facts about other apps come from their own pages, last checked 7 November 2026. Prices side by side are on [the CallVault site](https://callvault.aoneahsan.com/compare).
+Each page says who should stay where they are, then how to move. Facts about other apps come from their own pages, last checked 27 November 2026. Prices side by side are on [the CallVault site](https://callvault.aoneahsan.com/compare).
 
 - [Cube ACR](/compare/cube-acr)
 - [ACR Phone](/compare/acr-phone)

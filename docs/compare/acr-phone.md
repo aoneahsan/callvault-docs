@@ -1,6 +1,6 @@
 ---
 title: "Moving from ACR Phone to CallVault"
-description: "How to move from ACR Phone to CallVault, what changes, and who should stay on ACR Phone. Facts checked 7 November 2026."
+description: "How to move from ACR Phone to CallVault, what changes, and who should stay on ACR Phone. Facts checked 27 November 2026."
 sidebar_label: "ACR Phone"
 sidebar_position: 3
 topics: [compare, moving]
@@ -8,7 +8,7 @@ topics: [compare, moving]
 
 # Moving from ACR Phone to CallVault
 
-A replacement phone app from NLL Apps, with call recording on supported devices. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.nll.cb&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 7 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/acr-phone).
+A replacement phone app from NLL Apps, with call recording on supported devices. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.nll.cb&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 27 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/acr-phone).
 
 ## Should you move?
 

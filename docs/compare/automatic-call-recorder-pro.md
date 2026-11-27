@@ -1,6 +1,6 @@
 ---
 title: "Moving from Automatic Call Recorder Pro to CallVault"
-description: "How to move from Automatic Call Recorder Pro to CallVault, what changes, and who should stay on Automatic Call Recorder Pro. Facts checked 7 November 2026."
+description: "How to move from Automatic Call Recorder Pro to CallVault, what changes, and who should stay on Automatic Call Recorder Pro. Facts checked 27 November 2026."
 sidebar_label: "Automatic Call Recorder Pro"
 sidebar_position: 8
 topics: [compare, moving]
@@ -8,7 +8,7 @@ topics: [compare, moving]
 
 # Moving from Automatic Call Recorder Pro to CallVault
 
-A call recorder from SMSROBOT LTD. Its Google Play listing shows a last update of 1 November 2022. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.smsrobot.callu&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 7 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/automatic-call-recorder-pro).
+A call recorder from SMSROBOT LTD. Its Google Play listing shows a last update of 1 November 2022. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.smsrobot.callu&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 27 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/automatic-call-recorder-pro).
 
 ## Should you move?
 

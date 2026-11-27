@@ -1,6 +1,6 @@
 ---
 title: "Moving from BCR to CallVault"
-description: "How to move from BCR to CallVault, what changes, and who should stay on BCR. Facts checked 7 November 2026."
+description: "How to move from BCR to CallVault, what changes, and who should stay on BCR. Facts checked 27 November 2026."
 sidebar_label: "BCR"
 sidebar_position: 4
 topics: [compare, moving]
@@ -8,7 +8,7 @@ topics: [compare, moving]
 
 # Moving from BCR to CallVault
 
-Basic Call Recorder: an open-source recorder for rooted phones or custom firmware. Facts about it come from <a href="https://github.com/chenxiaolong/BCR" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 7 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/bcr).
+Basic Call Recorder: an open-source recorder for rooted phones or custom firmware. Facts about it come from <a href="https://github.com/chenxiaolong/BCR" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 27 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/bcr).
 
 ## Should you move?
 

@@ -1,6 +1,6 @@
 ---
 title: "Moving from Talker ACR to CallVault"
-description: "How to move from Talker ACR to CallVault, what changes, and who should stay on Talker ACR. Facts checked 7 November 2026."
+description: "How to move from Talker ACR to CallVault, what changes, and who should stay on Talker ACR. Facts checked 27 November 2026."
 sidebar_label: "Talker ACR"
 sidebar_position: 9
 topics: [compare, moving]
@@ -8,7 +8,7 @@ topics: [compare, moving]
 
 # Moving from Talker ACR to CallVault
 
-A call recorder from Joicoo Limited that also covers internet calls, with Free and Premium levels. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.talker.acr&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 7 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/talker-acr).
+A call recorder from Joicoo Limited that also covers internet calls, with Free and Premium levels. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.talker.acr&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 27 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/talker-acr).
 
 ## Should you move?
 

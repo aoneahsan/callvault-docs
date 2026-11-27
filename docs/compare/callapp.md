@@ -1,6 +1,6 @@
 ---
 title: "Moving from CallApp to CallVault"
-description: "How to move from CallApp to CallVault, what changes, and who should stay on CallApp. Facts checked 7 November 2026."
+description: "How to move from CallApp to CallVault, what changes, and who should stay on CallApp. Facts checked 27 November 2026."
 sidebar_label: "CallApp"
 sidebar_position: 11
 topics: [compare, moving]
@@ -8,7 +8,7 @@ topics: [compare, moving]
 
 # Moving from CallApp to CallVault
 
-A caller ID, spam blocking and messaging app that includes an automatic call recorder. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.callapp.contacts&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 7 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/callapp).
+A caller ID, spam blocking and messaging app that includes an automatic call recorder. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.callapp.contacts&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 27 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/callapp).
 
 ## Should you move?
 

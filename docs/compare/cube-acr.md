@@ -1,6 +1,6 @@
 ---
 title: "Moving from Cube ACR to CallVault"
-description: "How to move from Cube ACR to CallVault, what changes, and who should stay on Cube ACR. Facts checked 7 November 2026."
+description: "How to move from Cube ACR to CallVault, what changes, and who should stay on Cube ACR. Facts checked 27 November 2026."
 sidebar_label: "Cube ACR"
 sidebar_position: 2
 topics: [compare, moving]
@@ -8,7 +8,7 @@ topics: [compare, moving]
 
 # Moving from Cube ACR to CallVault
 
-A call recorder that also covers internet calls such as WhatsApp, from Cube Apps Ltd. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.catalinagroup.callrecorder&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 7 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/cube-acr).
+A call recorder that also covers internet calls such as WhatsApp, from Cube Apps Ltd. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.catalinagroup.callrecorder&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 27 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/cube-acr).
 
 ## Should you move?
 

@@ -1,6 +1,6 @@
 ---
 title: "Moving from Phone by Google to CallVault"
-description: "How to move from Phone by Google to CallVault, what changes, and who should stay on Phone by Google. Facts checked 7 November 2026."
+description: "How to move from Phone by Google to CallVault, what changes, and who should stay on Phone by Google. Facts checked 27 November 2026."
 sidebar_label: "Phone by Google"
 sidebar_position: 5
 topics: [compare, moving]
@@ -8,7 +8,7 @@ topics: [compare, moving]
 
 # Moving from Phone by Google to CallVault
 
-Google’s own phone app, with call recording on certain devices and carriers. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.google.android.dialer&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 7 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/phone-by-google).
+Google’s own phone app, with call recording on certain devices and carriers. Facts about it come from <a href="https://play.google.com/store/apps/details?id=com.google.android.dialer&amp;hl=en_US&amp;gl=US" target="_blank" rel="noopener noreferrer nofollow">its own page</a>, last checked 27 November 2026. Prices and the wider comparison are on [the CallVault site](https://callvault.aoneahsan.com/compare/phone-by-google).
 
 ## Should you move?
 
