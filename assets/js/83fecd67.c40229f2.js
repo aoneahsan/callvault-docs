@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcallvault_docs=self.webpackChunkcallvault_docs||[]).push([["20"],{3001(a){a.exports=JSON.parse('{"metadata":{"permalink":"/updates","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Release notes and announcements for CallVault.","blogTitle":"CallVault updates"}}')}}]);
